@@ -956,6 +956,7 @@ function App() {
       // Ingredients Section
       ingredientsTitle: 'Herbal Power. Backed by Science.',
       ingredientsSubtitle: 'Premium natural ingredients scientifically proven to enhance male vitality and performance',
+      /* eslint-disable-next-line no-dupe-keys */
       ingredients: [
         {
           name: 'Ginseng',
