@@ -1,11 +1,9 @@
-import React, { useState, useEffect, lazy, Suspense, useMemo } from 'react';
+import React, { useState, lazy, Suspense, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
-import SafeIcon from './common/SafeIcon';
 import './App.css';
 import { englishContent, urduContent } from './translations';
-import { PRODUCTS, slugifyProduct } from './common/products';
 
 
 // Lazy-loaded components
@@ -49,67 +47,6 @@ function App() {
 
   // Get current product from URL
   const { slug } = useParams();
-
-  // Helper: get product image by slug from Shop data
-  const getProductImageBySlug = (s) => {
-    try {
-      for (const list of Object.values(PRODUCTS)) {
-        const found = list.find(p => slugifyProduct(p.name) === s);
-        if (found) return found.image;
-      }
-    } catch (e) {
-      // noop
-    }
-    return null;
-  };
-
-  // Dynamically set social sharing images only for specific pages
-  useEffect(() => {
-    // If on a product page, use the Shop product image; otherwise use favicon
-    let ogImageUrl = slug
-      ? (getProductImageBySlug(slug) || '/favicon.png')
-      : '/favicon.png';
-
-    // Ensure absolute URL for social scrapers (WhatsApp, FB, X)
-    try {
-      if (ogImageUrl && ogImageUrl.startsWith('/')) {
-        ogImageUrl = `${window.location.origin}${ogImageUrl}`;
-      }
-    } catch (e) {
-      // This can fail on server-side rendering, but it's not critical.
-    }
-
-    const setOrCreateMeta = (selector, attrKey, attrValue, content) => {
-      let tag = document.head.querySelector(selector);
-      if (content) {
-        if (!tag) {
-          tag = document.createElement('meta');
-          tag.setAttribute(attrKey, attrValue);
-          tag.setAttribute('data-dynamic', 'true');
-          document.head.appendChild(tag);
-        }
-        tag.setAttribute('content', content);
-      } else {
-        // Remove only the tags we dynamically added
-        if (tag && tag.getAttribute('data-dynamic') === 'true') {
-          document.head.removeChild(tag);
-        }
-      }
-    };
-
-    setOrCreateMeta("meta[property='og:image']", 'property', 'og:image', ogImageUrl);
-    setOrCreateMeta("meta[name='twitter:image']", 'name', 'twitter:image', ogImageUrl);
-    setOrCreateMeta("meta[name='twitter:card']", 'name', 'twitter:card', 'summary_large_image');
-
-    return () => {
-      // Cleanup on unmount/navigate (reset to favicon for safety)
-      const fallback = `${window.location.origin}/favicon.png`;
-      setOrCreateMeta("meta[property='og:image']", 'property', 'og:image', fallback);
-      setOrCreateMeta("meta[name='twitter:image']", 'name', 'twitter:image', fallback);
-      setOrCreateMeta("meta[name='twitter:card']", 'name', 'twitter:card', 'summary_large_image');
-    };
-  }, [slug]);
-
 
   // Product configurations
   const productConfigs = {
@@ -172,7 +109,7 @@ function App() {
       specialPriceAmount: '5,000',
       // Common Problems section
       problemsTitle: '🧠 Common Problems Men Face Today',
-      problemsSubtitle: 'Millions of men silently struggle with these issues — but you don\'t have to.',
+      problemsSubtitle: 'Millions of men silently struggle with these issues — but you don’t have to.',
       problemsList: [
         'Premature Ejaculation (P.E)',
         'Erectile Dysfunction (E.D)',
@@ -1107,8 +1044,7 @@ function App() {
             { question: 'کیا یہ خاص طور پر پیٹ کی چربی پر اثر کرتا ہے؟', answer: '🔥 جی ہاں، Slim n Shape ضدی پیٹ کی چربی سمیت جسم کی مجموعی چربی کو ہدف بناتا ہے۔' },
             { question: 'کیا اس کے کوئی سائیڈ ایفیکٹس ہیں؟', answer: '🌿 نہیں۔ یہ قدرتی جڑی بوٹیوں پر مبنی ہے اور محفوظ استعمال کے لیے موزوں ہے۔' },
             { question: 'شوگر/بلڈ پریشر/کولیسٹرول والے لوگ استعمال کر سکتے ہیں؟', answer: '👍 عام طور پر موزوں ہے، مگر اگر آپ کو میڈیکل کنڈیشن ہے تو اپنے ڈاکٹر سے مشورہ ضرور کریں۔' },
-            { question: 'کس عمر کے لوگ استعمال کریں؟', answer: '👨‍🦰👩‍🦱 یہ 18 سال اور اس سے زائد عمر کے بالغ افراد کے لیے تجویز کیا جاتا ہے۔' },
-            { question: 'بہترین نتائج کے لیے کیسے استعمال کریں؟', answer: '💊 صبح خالی پیٹ 1 کیپسول + رات کو 2 کیپسول (Slim n Shape Herbal Tea کے ساتھ)۔ ہلکی غذا اور معتدل سرگرمی اپنائیں۔' },
+            { question: 'کیا نئے شادی شدہ حضرات اسے استعمال کر سکتے ہیں؟', answer: '👨‍🦰👩‍🦱 جی ہاں، یہ 18 سال اور اس سے زائد عمر کے بالغ حضرات کے لیے تجویز کیا جاتا ہے۔' },
             { question: 'کیا اسے دوسری ہربل چائے یا دواؤں کے ساتھ لے سکتے ہیں؟', answer: '🌿 جی ہاں، عام طور پر ممکن ہے۔ لیکن اگر آپ طاقتور ادویات استعمال کرتے ہیں تو پہلے اپنے ڈاکٹر سے مشورہ کریں۔' },
             { question: 'استعمال بند کرنے کے بعد دوبارہ وزن بڑھے گا؟', answer: '⚡ نہیں، اگر آپ متوازن غذا اور ایکٹیو لائف اسٹائل برقرار رکھیں تو نتائج دیرپا رہتے ہیں۔' }
           ]
