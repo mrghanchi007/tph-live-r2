@@ -49,45 +49,6 @@ function App() {
   // Get current product from URL
   const { slug } = useParams();
 
-  // Dynamically set social sharing images only for specific pages
-  useEffect(() => {
-    const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon';
-    const ogImageUrl = isLuxuryProduct
-      ? (productConfigs['sultan-shahi-gold-majoon']?.featureImage || 'https://i.ibb.co/qTywxNG/Sultan-Shahi-Gold-Majoon.png')
-      : null;
-
-    const setOrCreateMeta = (selector, attrKey, attrValue, content) => {
-      let tag = document.head.querySelector(selector);
-      if (content) {
-        if (!tag) {
-          tag = document.createElement('meta');
-          tag.setAttribute(attrKey, attrValue);
-          tag.setAttribute('data-dynamic', 'true');
-          document.head.appendChild(tag);
-        }
-        tag.setAttribute('content', content);
-      } else {
-        // Remove only the tags we dynamically added
-        if (tag && tag.getAttribute('data-dynamic') === 'true') {
-          document.head.removeChild(tag);
-        }
-      }
-    };
-
-    if (ogImageUrl) {
-      setOrCreateMeta("meta[property='og:image']", 'property', 'og:image', ogImageUrl);
-      setOrCreateMeta("meta[name='twitter:image']", 'name', 'twitter:image', ogImageUrl);
-    } else {
-      setOrCreateMeta("meta[property='og:image']", 'property', 'og:image', null);
-      setOrCreateMeta("meta[name='twitter:image']", 'name', 'twitter:image', null);
-    }
-
-    return () => {
-      // Cleanup on unmount/navigate
-      setOrCreateMeta("meta[property='og:image']", 'property', 'og:image', null);
-      setOrCreateMeta("meta[name='twitter:image']", 'name', 'twitter:image', null);
-    };
-  }, [slug]);
 
   // Product configurations
   const productConfigs = {

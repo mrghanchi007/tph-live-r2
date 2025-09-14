@@ -35,23 +35,21 @@ export async function middleware(req) {
       imageUrl = `${req.nextUrl.origin}${imageUrl}`;
     }
 
-    // Replace placeholders or existing meta tags in the HTML
-    // This is a robust way to handle both cases where tags exist or not
-    const escape = (str) => str.replace(/"/g, '&quot;');
-    const replacements = {
-      '<title>TPH | The Planner Herbal International</title>': `<title>${escape(product.name)} | TPH Int.</title>`,
-      '"og:title" content="Premium Health Products | The Planner Herbal International"': `"og:title" content="${escape(product.name)}"`,
-      '"og:description" content="Premium herbal health products from The Planner Herbal International."': `"og:description" content="${escape(product.description)}"`,
-      '"og:image" content="/favicon.png"': `"og:image" content="${escape(imageUrl)}"`,
-      '"twitter:card" content="summary"': '"twitter:card" content="summary_large_image"',
-      '"twitter:title" content="Premium Health Products | The Planner Herbal International"': `"twitter:title" content="${escape(product.name)}"`,
-      '"twitter:description" content="Premium herbal health products from The Planner Herbal International."': `"twitter:description" content="${escape(product.description)}"`,
-      '"twitter:image" content="/favicon.png"': `"twitter:image" content="${escape(imageUrl)}"`,
-    };
+    // Use regular expressions to robustly replace meta tags
+    const escape = (str) => str.replace(/"/g, '&quot;').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-    for (const [key, value] of Object.entries(replacements)) {
-      html = html.replace(key, value);
-    }
+    const title = escape(product.name);
+    const description = escape(product.description);
+
+    html = html
+      .replace(/<title>.*?<\/title>/, `<title>${title} | TPH Int.</title>`)
+      .replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`)
+      .replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${description}" />`)
+      .replace(/<meta property="og:image" content=".*?" \/>/, `<meta property="og:image" content="${imageUrl}" />`)
+      .replace(/<meta property="twitter:card" content=".*?" \/>/, '<meta property="twitter:card" content="summary_large_image" />')
+      .replace(/<meta property="twitter:title" content=".*?" \/>/, `<meta property="twitter:title" content="${title}" />`)
+      .replace(/<meta property="twitter:description" content=".*?" \/>/, `<meta property="twitter:description" content="${description}" />`)
+      .replace(/<meta property="twitter:image" content=".*?" \/>/, `<meta property="twitter:image" content="${imageUrl}" />`);
 
     // Return the modified HTML
     return new Response(html, {
