@@ -5,7 +5,7 @@ import SafeIcon from '../common/SafeIcon';
 
 const { FiChevronDown, FiChevronUp } = FiIcons;
 
-const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, overrideFaqs, ctaLanguage }) => {
+const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, overrideFaqs, ctaLanguage, slug }) => {
     const [openFAQ, setOpenFAQ] = useState(null);
 
     // Memoize FAQ data for better performance
@@ -169,7 +169,7 @@ const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, override
             />
             
             <section
-                className={`py-12 md:py-16 bg-gradient-to-br from-blue-50 to-indigo-50 ${language === 'ur' ? 'font-urdu' : ''}`}
+                className={`py-12 md:py-16 ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-br from-black to-gray-900' : 'bg-gradient-to-br from-blue-50 to-indigo-50'} ${language === 'ur' ? 'font-urdu' : ''}`}
                 dir={language === 'ur' ? 'rtl' : 'ltr'}
                 aria-labelledby="faq-heading"
                 role="region"
@@ -180,14 +180,14 @@ const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, override
                 <motion.div className="text-center mb-12" {...fadeInUp}>
                     <h2
                         id="faq-heading"
-                        className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                        className={`text-3xl md:text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}
                         title={language === 'en' ? "Frequently asked questions about B-Maxman Royal herbal supplement" : "بی میکس مین رائل جڑی بوٹیوں کے سپلیمنٹ کے بارے میں اکثر پوچھے جانے والے سوالات"}
                         itemProp="name"
                     >
                         {currentContent.title}
                     </h2>
                     {currentContent.subtitle && (
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+                        <p className={`text-lg max-w-3xl mx-auto mt-4 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-600'}`}>
                             {currentContent.subtitle}
                         </p>
                     )}
@@ -205,15 +205,15 @@ const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, override
                             itemType="https://schema.org/Question"
                             itemProp="mainEntity"
                         >
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
+                            <div className={`rounded-lg shadow-lg overflow-hidden ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gray-800 border border-yellow-400' : 'bg-white border border-gray-100'}`}>
                                 <button
                                     onClick={() => toggleFAQ(index)}
-                                    className={`w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors ${language === 'ur' ? 'text-right' : ''}`}
+                                    className={`w-full px-6 py-4 text-left flex justify-between items-center transition-colors ${language === 'ur' ? 'text-right' : ''} ${slug === 'sultan-shahi-gold-majoon' ? 'hover:bg-gray-700' : 'hover:bg-gray-50'}`}
                                     aria-expanded={openFAQ === index}
                                     aria-controls={`faq-answer-${index}`}
                                 >
                                     <h3 
-                                        className="font-semibold text-gray-800 text-lg"
+                                        className={`font-semibold text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}
                                         itemProp="name"
                                         title={faq.keywords}
                                     >
@@ -221,7 +221,7 @@ const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, override
                                     </h3>
                                     <SafeIcon
                                         icon={openFAQ === index ? FiChevronUp : FiChevronDown}
-                                        className="text-red-600 text-xl flex-shrink-0 ml-2"
+                                        className={`text-xl flex-shrink-0 ml-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-red-600'}`}
                                     />
                                 </button>
 
@@ -236,13 +236,13 @@ const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, override
                                             className="overflow-hidden"
                                         >
                                             <div 
-                                                className="px-6 pb-4 border-t border-gray-100"
+                                                className={`px-6 pb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'border-t border-yellow-400' : 'border-t border-gray-100'}`}
                                                 itemScope
                                                 itemType="https://schema.org/Answer"
                                                 itemProp="acceptedAnswer"
                                             >
                                                 <div 
-                                                    className="pt-4 text-gray-700 leading-relaxed whitespace-pre-line"
+                                                    className={`pt-4 leading-relaxed whitespace-pre-line ${slug === 'sultan-shahi-gold-majoon' ? 'text-gray-300' : 'text-gray-700'}`}
                                                     itemProp="text"
                                                     title={faq.keywords}
                                                 >
@@ -264,10 +264,10 @@ const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, override
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.5 }}
                 >
-                    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg max-w-2xl mx-auto border border-red-100">
+                    <div className={`p-6 rounded-xl shadow-lg max-w-2xl mx-auto ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gray-800/80 backdrop-blur-sm border border-yellow-400' : 'bg-white/80 backdrop-blur-sm border border-red-100'}`}>
                         {/* Force direction/font for CTA independently to fix alignment */}
                         <div dir={effectiveCtaLang === 'ur' ? 'rtl' : 'ltr'} className={`${effectiveCtaLang === 'ur' ? 'font-urdu' : ''}`}>
-                            <p className="text-lg font-semibold text-gray-800 mb-4">
+                            <p className={`text-lg font-semibold mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
                                 {effectiveCtaLang === 'en' ?
                                     "Still have questions? Contact us directly!" :
                                     "اب بھی سوالات ہیں؟ براہ راست رابطہ کریں!"
@@ -277,7 +277,7 @@ const FAQSection = ({ language = 'en', overrideTitle, overrideSubtitle, override
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" dir={effectiveCtaLang === 'ur' ? 'rtl' : 'ltr'}>
                             <a
                                 href="tel:923328888935"
-                                className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center space-x-2"
+                                className={`font-bold py-3 px-6 rounded-lg transition-colors flex items-center space-x-2 ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-600 hover:bg-yellow-700 text-black' : 'bg-red-600 hover:bg-red-700 text-white'}`}
                                 aria-label="Call B-Maxman customer service"
                                 title="Call for B-Maxman orders and queries"
                             >

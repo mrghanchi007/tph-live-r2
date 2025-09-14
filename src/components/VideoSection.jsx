@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import { useParams } from 'react-router-dom';
 
 const { FiPlayCircle } = FiIcons;
 
 const VideoSection = ({ videoId, title, subtitle, coverImage, videoTitle }) => {
+  const { slug } = useParams();
+  const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon';
   const [videoLoaded, setVideoLoaded] = useState(false);
   const heading = title || 'See B-Maxman in Action';
   const sub = subtitle || 'Watch how B-Maxman has transformed the lives of men across Pakistan';
@@ -19,7 +22,7 @@ const VideoSection = ({ videoId, title, subtitle, coverImage, videoTitle }) => {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-r from-red-700 to-red-800 text-white">
+    <section className={`py-12 md:py-16 ${isLuxuryProduct ? 'bg-gradient-to-r from-gray-900 to-black' : 'bg-gradient-to-r from-red-700 to-red-800'} text-white`}>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-10"
@@ -27,8 +30,8 @@ const VideoSection = ({ videoId, title, subtitle, coverImage, videoTitle }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>
-          <p className="text-xl text-red-100 max-w-3xl mx-auto">
+          <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${isLuxuryProduct ? 'text-yellow-400' : 'text-white'}`}>{heading}</h2>
+          <p className={`text-xl ${isLuxuryProduct ? 'text-yellow-200' : 'text-red-100'} max-w-3xl mx-auto`}>
             {sub}
           </p>
         </motion.div>
@@ -50,7 +53,7 @@ const VideoSection = ({ videoId, title, subtitle, coverImage, videoTitle }) => {
                   backgroundPosition: 'center'
                 }}
               >
-                <div className="bg-red-700/80 p-8 rounded-xl flex flex-col items-center max-w-md">
+                <div className={`${isLuxuryProduct ? 'bg-yellow-400/20 border border-yellow-400/30' : 'bg-red-700/80'} p-8 rounded-xl flex flex-col items-center max-w-md`}>
                   <SafeIcon icon={FiPlayCircle} className="text-white text-5xl mb-4" />
                   <p className="text-lg font-bold mb-2">Click to load video</p>
                   <p className="text-sm text-center">Loading the video will enable YouTube cookies. We respect your privacy.</p>
@@ -67,8 +70,8 @@ const VideoSection = ({ videoId, title, subtitle, coverImage, videoTitle }) => {
             )}
           </div>
 
-          <div className="mt-8 bg-red-900/50 p-6 rounded-lg text-center">
-            <p className="text-lg font-bold">
+          <div className={`mt-8 ${isLuxuryProduct ? 'bg-yellow-400/10 border border-yellow-400/20' : 'bg-red-900/50'} p-6 rounded-lg text-center`}>
+            <p className={`text-lg font-bold ${isLuxuryProduct ? 'text-yellow-400' : 'text-white'}`}>
               Don't just take our word for it — see the real results for yourself!
             </p>
           </div>

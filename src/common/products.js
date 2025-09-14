@@ -56,7 +56,8 @@ export const PRODUCTS = {
         'Enhances vitality',
         'Improves overall health',
         'Premium herbal ingredients'
-      ]
+      ],
+      theme: 'luxury'
     },
     { 
       name: 'Shahi Tila', 
@@ -68,19 +69,21 @@ export const PRODUCTS = {
         'Supports male health',
         'Natural ingredients',
         'Traditional formula'
-      ]
+      ],
+      theme: 'luxury'
     },
     { 
-      name: 'Sultan Majoon', 
-      price: 8000, 
-      image: '/images/Sultan Majoon.png',
+      name: 'Sultan Shahi Gold Majoon', 
+      price: 5000, 
+      image: 'https://i.ibb.co/qTywxNG/Sultan-Shahi-Gold-Majoon.png',
       description: 'Royal herbal jam for strength and vitality',
       benefits: [
         'Boosts energy',
         'Enhances stamina',
         'Supports immunity',
         'Traditional recipe'
-      ]
+      ],
+      theme: 'luxury'
     },
   ],
   women: [
