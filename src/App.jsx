@@ -1,7 +1,8 @@
-import React, { useState, lazy, Suspense, useMemo } from 'react';
+import React, { useState, useEffect, lazy, Suspense, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
+import SafeIcon from './common/SafeIcon';
 import './App.css';
 import { englishContent, urduContent } from './translations';
 
