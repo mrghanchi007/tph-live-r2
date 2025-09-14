@@ -286,8 +286,6 @@ function App() {
       },
       // Problems section image for center layout
       problemsImage: 'https://i.ibb.co/bM37d7tt/Common-Problems-Men-Face-Today.png',
-      // Solution text
-      solution: '✨ Sultan Shahi Gold Majoon is the royal solution you\'ve been looking for!',
       // Video section
       videoId: 'esXcBkknfnc',
       videoTitle: 'See Sultan Shahi Gold Majoon in Action',
