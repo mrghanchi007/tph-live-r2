@@ -9,6 +9,14 @@ const findProductBySlug = (slug) => {
   return null;
 };
 
+// List of routes that should be handled by the SPA (all other routes will be served as static files)
+const SPA_ROUTES = ['/product/', '/shop', '/category', '/about', '/contact'];
+
+// Check if the current path should be handled by the SPA
+const shouldHandleRoute = (pathname) => {
+  return SPA_ROUTES.some(route => pathname.startsWith(route));
+};
+
 export default async function middleware(request) {
   const url = new URL(request.url);
   const { pathname, origin } = url;
@@ -18,13 +26,18 @@ export default async function middleware(request) {
     return;
   }
 
+  // If it's not an SPA route, let Vercel handle it as a static file
+  if (!shouldHandleRoute(pathname)) {
+    return;
+  }
+
   try {
     // Fetch the root index.html to use as a template for all client-side routes
     const indexUrl = new URL('/', origin);
     const response = await fetch(indexUrl);
     let html = await response.text();
 
-    // If it's a product page, inject dynamic meta tags
+    // Handle SPA routes
     if (pathname.startsWith('/product/')) {
       const slug = pathname.split('/product/')[1];
       const product = findProductBySlug(slug);
