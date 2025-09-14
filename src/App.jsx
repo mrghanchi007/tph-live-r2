@@ -5,6 +5,7 @@ import * as FiIcons from 'react-icons/fi';
 import SafeIcon from './common/SafeIcon';
 import './App.css';
 import { englishContent, urduContent } from './translations';
+import { PRODUCTS, slugifyProduct } from './common/products';
 
 
 // Lazy-loaded components
@@ -48,6 +49,64 @@ function App() {
 
   // Get current product from URL
   const { slug } = useParams();
+
+  // Helper: get product image by slug from Shop data
+  const getProductImageBySlug = (s) => {
+    try {
+      for (const list of Object.values(PRODUCTS)) {
+        const found = list.find(p => slugifyProduct(p.name) === s);
+        if (found) return found.image;
+      }
+    } catch (e) {
+      // noop
+    }
+    return null;
+  };
+
+  // Dynamically set social sharing images only for specific pages
+  useEffect(() => {
+    // If on a product page, use the Shop product image; otherwise use favicon
+    let ogImageUrl = slug
+      ? (getProductImageBySlug(slug) || '/favicon.png')
+      : '/favicon.png';
+
+    // Ensure absolute URL for social scrapers (WhatsApp, FB, X)
+    try {
+      if (ogImageUrl && ogImageUrl.startsWith('/')) {
+        ogImageUrl = `${window.location.origin}${ogImageUrl}`;
+      }
+    } catch {}
+
+    const setOrCreateMeta = (selector, attrKey, attrValue, content) => {
+      let tag = document.head.querySelector(selector);
+      if (content) {
+        if (!tag) {
+          tag = document.createElement('meta');
+          tag.setAttribute(attrKey, attrValue);
+          tag.setAttribute('data-dynamic', 'true');
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      } else {
+        // Remove only the tags we dynamically added
+        if (tag && tag.getAttribute('data-dynamic') === 'true') {
+          document.head.removeChild(tag);
+        }
+      }
+    };
+
+    setOrCreateMeta("meta[property='og:image']", 'property', 'og:image', ogImageUrl);
+    setOrCreateMeta("meta[name='twitter:image']", 'name', 'twitter:image', ogImageUrl);
+    setOrCreateMeta("meta[name='twitter:card']", 'name', 'twitter:card', 'summary_large_image');
+
+    return () => {
+      // Cleanup on unmount/navigate (reset to favicon for safety)
+      const fallback = `${window.location.origin}/favicon.png`;
+      setOrCreateMeta("meta[property='og:image']", 'property', 'og:image', fallback);
+      setOrCreateMeta("meta[name='twitter:image']", 'name', 'twitter:image', fallback);
+      setOrCreateMeta("meta[name='twitter:card']", 'name', 'twitter:card', 'summary_large_image');
+    };
+  }, [slug]);
 
 
   // Product configurations
