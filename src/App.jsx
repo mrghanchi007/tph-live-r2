@@ -75,7 +75,9 @@ function App() {
       if (ogImageUrl && ogImageUrl.startsWith('/')) {
         ogImageUrl = `${window.location.origin}${ogImageUrl}`;
       }
-    } catch {}
+    } catch (e) {
+      // This can fail on server-side rendering, but it's not critical.
+    }
 
     const setOrCreateMeta = (selector, attrKey, attrValue, content) => {
       let tag = document.head.querySelector(selector);
