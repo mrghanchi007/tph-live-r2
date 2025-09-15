@@ -60,23 +60,23 @@ export const PRODUCTS = {
       theme: 'luxury'
     },
     { 
-      name: 'Shahi Tila', 
-      price: 2500, 
-      image: '/images/Shahi Tila.png',
-      description: 'Traditional herbal supplement for men',
-      benefits: [
-        'Increases energy',
-        'Supports male health',
-        'Natural ingredients',
-        'Traditional formula'
-      ],
-      theme: 'luxury'
-    },
-    { 
       name: 'Sultan Shahi Gold Majoon', 
       price: 5000, 
       image: 'https://i.ibb.co/qTywxNG/Sultan-Shahi-Gold-Majoon.png',
       description: 'Royal herbal jam for strength and vitality',
+      benefits: [
+        'Boosts energy',
+        'Enhances stamina',
+        'Supports immunity',
+        'Traditional recipe'
+      ],
+      theme: 'luxury'
+    },
+    { 
+      name: 'Sultan Shahi Gold Tila', 
+      price: 2500, 
+      image: 'https://i.ibb.co/Z6r1jBgw/Sultan-Shahi-Gold-Majoon.png',
+      description: 'Royal herbal supplement for strength and vitality',
       benefits: [
         'Boosts energy',
         'Enhances stamina',

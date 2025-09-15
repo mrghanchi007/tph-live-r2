@@ -29,8 +29,8 @@ const ProductDetail = () => {
   const product = findProductBySlug(slug);
   const category = product ? CATEGORY_LIST.find(cat => cat.slug === product.category) : null;
   
-  // Sirf Sultan Shahi Gold Majoon ke liye luxury theme
-  const isLuxuryTheme = slug === 'sultan-shahi-gold-majoon';
+  // Sultan Shahi Gold Majoon aur Sultan Shahi Gold Tila ke liye luxury theme
+  const isLuxuryTheme = slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila';
 
   useEffect(() => {
     if (product) {

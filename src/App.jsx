@@ -1052,10 +1052,555 @@ function App() {
         }
       }
     },
-    'shahi-tila': {
-      title: 'Shahi Tila',
-      solution: 'BustMax Breast Oil helps enhance your natural curves!',
-      benefitsTitle: language === 'en' ? 'Benefits of BustMax Breast Oil' : 'بسٹ میکس بریسٹ آئل کے فوائد'
+    'sultan-shahi-gold-tila': {
+      title: 'Sultan Shahi Gold Tila',
+      subtitle: 'Herbal Massage Oil',
+      badge: 'BEST SELLER',
+      heroImage: 'https://i.ibb.co/SXW1B3f4/Sultan-Shahi-Gold-Tila-Hero-Section.png',
+      solution: 'Premium herbal blend for men\'s strength, endurance & vitality',
+      benefitsTitle: language === 'en' ? '✨ Benefits of Sultan Shahi Gold Tila' : 'سلطان شاہی گولڈ تلا کے فوائد',
+      benefitsDescription: '🌿 Natural herbal massage oil for men showing improved firmness and vitality',
+      benefitsList: [
+        {
+          text: '✔ Improves firmness & natural size',
+          image: 'https://i.ibb.co/Q3kJmJXx/Improves-firmness-natural-size.png'
+        },
+        {
+          text: '💪 Stamina & endurance booster for long-lasting performance',
+          image: 'https://i.ibb.co/s9DYWy41/Stamina-endurance-booster-for-long-lasting-performance.png'
+        },
+        {
+          text: '✔ Boosts strength & energy levels',
+          image: 'https://i.ibb.co/8ncppSzY/Boosts-strength-energy-levels.png'
+        },
+        {
+          text: '🧠 Stress relief & confidence enhancer for overall well-being',
+          image: 'https://i.ibb.co/wGmnS6m/Stress-relief-confidence-enhancer-for-overall-well-being.png'
+        },
+        {
+          text: '✔ Reduces stress & enhances self-confidence',
+          image: 'https://i.ibb.co/1J0nzv0y/Reduces-stress-enhances-self-confidence.png'
+        },
+        {
+          text: '❤️ Blood circulation support for improved male performance',
+          image: 'https://i.ibb.co/TqK770Zs/Blood-circulation-support-for-improved-male-performance.png'
+        },
+        {
+          text: '✔ Promotes better flow & tissue health',
+          image: 'https://i.ibb.co/tp9QtTjb/Promotes-better-flow-tissue-health.png'
+        },
+        {
+          text: '🌱 Skin & tissue nourishment for softness & regeneration',
+          image: 'https://i.ibb.co/q3LcLTfs/Skin-tissue-nourishment-for-softness-regeneration.png'
+        },
+        {
+          text: '✔ 100% natural, no side effects',
+          image: 'https://i.ibb.co/84nZ4k7J/100-natural-no-side-effects.png'
+        }
+      ],
+      problemsTitle: '🧠 Common Problems Men Face Today',
+      problemsSubtitle: 'Millions of men silently struggle with these issues — but you don\'t have to.',
+      problemsList: [
+        'Lack of firmness & size issues',
+        'Premature ejaculation (P.E)',
+        'Weak stamina & low endurance',
+        'Poor blood circulation',
+        'Stress, fatigue & low energy',
+        'Low confidence & relationship pressure',
+        'Skin dryness & weak tissue health',
+        'Hormonal imbalance affecting performance',
+        'Slow recovery & aging-related weakness'
+      ],
+      problemsSolution: '🌿 Sultan Shahi Gold Tila is the premium herbal blend for men\'s strength, endurance & vitality.',
+      // Video Section
+      videoId: '6LQWLGuWyKQ',
+      videoTitle: '🎥 See Sultan Shahi Gold Tila in Action',
+      videoSubtitle: 'Watch how Sultan Shahi Gold Tila has enhanced the strength, stamina & confidence of men across Pakistan.',
+      videoCover: 'https://i.ibb.co/M5GRjfkZ/Sultan-Shahi-Gold-Tila-in-Action.png',
+      videoPrivacyNotice: '(Loading the video will enable YouTube cookies. We respect your privacy.)',
+      videoCallToAction: '✨ Don\'t just take our word for it — see the real results for yourself!',
+      // Testimonials Section
+      testimonialsTitle: '⭐ What Our Customers Say',
+      testimonialsSubtitle: 'Real feedback from satisfied customers across Pakistan',
+      // Before & After section
+      beforeAfterTitle: '🌟 Real Results, Real Men',
+      beforeAfterSubtitle: 'See the difference Sultan Shahi Gold Tila has made in the lives of men across Pakistan.',
+      beforeAfterLabels: {
+        beforeTitle: 'Before Sultan Shahi Gold Tila',
+        afterTitle: 'After Sultan Shahi Gold Tila',
+        beforeDesc: '',
+        afterDesc: '',
+        weeksPrefix: '',
+        weeksSuffix: ' Weeks of Use'
+      },
+      beforeAfterSets: [
+        {
+          id: 1,
+          duration: 4,
+          before: 'https://i.ibb.co/zhgtTf4p/4-Weeks-of-Use-Before-Sultan-Shahi-Gold-Tila.png',
+          after: 'https://i.ibb.co/PZkjBzqB/4-Weeks-of-Use-After-Sultan-Shahi-Gold-Tila.png',
+          summary: '',
+          beforeDetails: '😞 Low stamina, weak endurance, relationship stress',
+          afterDetails: '💪 Improved firmness, boosted stamina, renewed confidence'
+        },
+        {
+          id: 2,
+          duration: 8,
+          before: 'https://i.ibb.co/JjQG5M6q/8-Weeks-of-Use-Before-Sultan-Shahi-Gold-Tila.png',
+          after: 'https://i.ibb.co/B20c8dcy/8-Weeks-of-Use-After-Sultan-Shahi-Gold-Tila.png',
+          summary: '',
+          beforeDetails: '😔 Poor blood circulation, lack of energy, intimacy issues',
+          afterDetails: '🔥 Strong performance, high energy, happy relationship'
+        }
+      ],
+      // Herbal Power Section
+      herbalSection: {
+        title: '🌿 Herbal Power. Backed by Science.',
+        subtitle: 'A potent blend of natural herbs and essential oils, trusted for centuries to boost strength, stamina & vitality.',
+        ingredients: [
+          {
+            name: '🌸 Ylang Ylang Oil',
+            description: 'Improves blood flow & provides relaxation',
+            image: 'https://i.ibb.co/mCc98QJN/Ylang-Ylang-Oil.png'
+          },
+          {
+            name: '🌿 Ginger Oil',
+            description: 'Enhances circulation & boosts energy',
+            image: 'https://i.ibb.co/5gd9y6dy/Ginger-Oil.png'
+          },
+          {
+            name: '💜 Lavender Oil',
+            description: 'Refreshes & soothes tissues',
+            image: 'https://i.ibb.co/8L7Y9pGJ/Lavender-Oil.png'
+          },
+          {
+            name: '🐟 Fish Oil',
+            description: 'Enhances flexibility & firmness',
+            image: 'https://i.ibb.co/dsPj3jB1/Fish-Oil.png'
+          },
+          {
+            name: '🥥 Egg Oil',
+            description: 'Nourishes & strengthens tissues',
+            image: 'https://i.ibb.co/9mmCGYC8/Egg-Oil.png'
+          },
+          {
+            name: '🌰 Nutmeg Oil',
+            description: 'Improves endurance & performance',
+            image: 'https://i.ibb.co/FL0vvL2k/Nutmeg-Oil.png'
+          },
+          {
+            name: '🌿 Reg Mahi',
+            description: 'Traditionally known for strength & stamina',
+            image: 'https://i.ibb.co/VYSz2ypt/Reg-Mahi.png'
+          },
+          {
+            name: '🍃 Bair Boti',
+            description: 'Supports skin & tissue repair',
+            image: 'https://i.ibb.co/NdZ9xtjg/Bair-Boti.png'
+          },
+          {
+            name: '🌱 Malkagni (Celastrus Paniculatus)',
+            description: 'Boosts nerve health & increases energy',
+            image: 'https://i.ibb.co/gMHLGBqT/Malkagni.png'
+          }
+        ],
+        footer: '🌿 100% Natural • ⚗️ Scientifically Proven • 🛡️ Safe & Effective',
+        footerDescription: 'Each ingredient is carefully selected & tested for maximum potency and safe results.'
+      },
+      pricing: {
+        title: 'Special Pricing',
+        subtitle: '🚚 Free Delivery | 💰 Cash on Delivery',
+        packages: [
+          {
+            title: 'Single Pack',
+            price: 2500,
+            originalPrice: null,
+            features: ['30ml Premium Oil', 'Free Delivery', 'Cash on Delivery']
+          },
+          {
+            title: 'Double Pack',
+            price: 4500,
+            originalPrice: 5000,
+            saveAmount: 500,
+            features: ['2 x 30ml Premium Oil', 'Free Delivery', 'Cash on Delivery', 'Save Rs 500']
+          },
+          {
+            title: 'Triple Pack',
+            price: 6500,
+            originalPrice: 7500,
+            saveAmount: 1000,
+            features: ['3 x 30ml Premium Oil', 'Free Delivery', 'Cash on Delivery', 'Save Rs 1,000']
+          }
+        ]
+      },
+      // Dosage & Usage Instructions section
+      dosageSection: {
+        title: '💧 Dosage & Usage Instructions',
+        image: 'https://i.ibb.co/5hQ8VXNM/Dosage-Usage-Instructions.png',
+        content: {
+          dosage: {
+            title: 'Dosage',
+            points: [
+              '👉 Take 5–6 drops of Sultan Shahi Gold Tila on your palm every night.',
+              '👉 Gently massage for 5–10 minutes until fully absorbed.'
+            ]
+          },
+          duration: {
+            title: 'Course Duration',
+            points: [
+              '👉 Use daily for 1–3 months to achieve full and long-lasting results.'
+            ]
+          },
+          bestResults: {
+            title: 'Best Results',
+            points: [
+              '👉 Apply at night before sleep for maximum absorption.',
+              '👉 Avoid cold drinks, smoking, and oily/fried foods during the course.',
+              '👉 Maintain a light diet and healthy lifestyle to speed up recovery & strength.'
+            ]
+          }
+        }
+      },
+      // Customer Reviews Section
+      customerReviewsSection: {
+        title: '⭐ What Our Customers Say',
+        subtitle: 'Real feedback from satisfied customers across Pakistan',
+        reviews: [
+          {
+            id: 1,
+            name: 'Muhammad Ali',
+            age: 32,
+            location: 'Karachi',
+            rating: 5,
+            review: 'Amazing results in just 3 weeks! My confidence has improved significantly and my wife is very happy with the changes.',
+            date: '2 weeks ago',
+            verified: true
+          },
+          {
+            id: 2,
+            name: 'Ahmed Hassan',
+            age: 28,
+            location: 'Lahore',
+            rating: 5,
+            review: 'Natural ingredients and no side effects. I feel more energetic and my performance has improved dramatically.',
+            date: '1 month ago',
+            verified: true
+          },
+          {
+            id: 3,
+            name: 'Usman Khan',
+            age: 35,
+            location: 'Islamabad',
+            rating: 4,
+            review: 'Good product with visible results. Takes some time but definitely worth it. Highly recommend for married men.',
+            date: '3 weeks ago',
+            verified: true
+          },
+          {
+            id: 4,
+            name: 'Tariq Mahmood',
+            age: 40,
+            location: 'Faisalabad',
+            rating: 5,
+            review: 'Best herbal oil I have used. Natural formula and fast absorption. My stamina and endurance have improved a lot.',
+            date: '2 months ago',
+            verified: true
+          }
+        ],
+        stats: {
+          totalReviews: 1247,
+          averageRating: 4.8,
+          fiveStarPercentage: 89,
+          recommendationRate: 96
+        }
+      },
+      // Urdu translations
+      i18n: {
+        ur: {
+          // Problems section
+          problemsTitle: '🧠 آج مردوں کے عام مسائل',
+          problemsSubtitle: 'لاکھوں مرد خاموشی سے ان مسائل کا شکار ہیں — لیکن آپ کو ایسا نہیں کرنا چاہیے۔',
+          problemsList: [
+            'مضبوطی اور سائز کے مسائل',
+            'قبل از وقت انزال (P.E)',
+            'کمزور اسٹیمنا اور کم برداشت',
+            'خون کی ناکافی گردش',
+            'تناؤ، تھکاوٹ اور کم توانائی',
+            'کم اعتماد اور رشتے کا دباؤ',
+            'جلد کی خشکی اور کمزور ٹشو',
+            'ہارمونل عدم توازن جو کارکردگی کو متاثر کرتا ہے',
+            'سست بحالی اور عمر کی کمزوری'
+          ],
+          problemsSolution: '🌿 سلطان شاہی گولڈ تلا مردوں کی طاقت، برداشت اور حیویت کے لیے پریمیم ہربل مرکب ہے۔',
+          
+          // Benefits section
+          benefitsTitle: '✨ سلطان شاہی گولڈ تلا کے فوائد',
+          benefitsDescription: '🌿 مردوں کے لیے قدرتی ہربل مساج آئل جو بہتر مضبوطی اور حیویت ظاہر کرتا ہے',
+          benefitsList: [
+            {
+              text: '✔ مضبوطی اور قدرتی سائز بہتر بناتا ہے',
+              image: 'https://i.ibb.co/Q3kJmJXx/Improves-firmness-natural-size.png'
+            },
+            {
+              text: '💪 طویل المیعاد کارکردگی کے لیے اسٹیمنا اور برداشت بڑھاتا ہے',
+              image: 'https://i.ibb.co/s9DYWy41/Stamina-endurance-booster-for-long-lasting-performance.png'
+            },
+            {
+              text: '✔ طاقت اور توانائی کی سطح بڑھاتا ہے',
+              image: 'https://i.ibb.co/8ncppSzY/Boosts-strength-energy-levels.png'
+            },
+            {
+              text: '🧠 مجموعی بہبودی کے لیے تناؤ کا علاج اور اعتماد بڑھاتا ہے',
+              image: 'https://i.ibb.co/wGmnS6m/Stress-relief-confidence-enhancer-for-overall-well-being.png'
+            },
+            {
+              text: '✔ تناؤ کم کرتا ہے اور خود اعتمادی بڑھاتا ہے',
+              image: 'https://i.ibb.co/1J0nzv0y/Reduces-stress-enhances-self-confidence.png'
+            },
+            {
+              text: '❤️ بہتر مردانہ کارکردگی کے لیے خون کی گردش میں مدد',
+              image: 'https://i.ibb.co/TqK770Zs/Blood-circulation-support-for-improved-male-performance.png'
+            },
+            {
+              text: '✔ بہتر بہاؤ اور ٹشو کی صحت کو فروغ دیتا ہے',
+              image: 'https://i.ibb.co/tp9QtTjb/Promotes-better-flow-tissue-health.png'
+            },
+            {
+              text: '🌱 نرمی اور تجدید کے لیے جلد اور ٹشو کی پرورش',
+              image: 'https://i.ibb.co/q3LcLTfs/Skin-tissue-nourishment-for-softness-regeneration.png'
+            },
+            {
+              text: '✔ 100% قدرتی، کوئی سائیڈ ایفیکٹس نہیں',
+              image: 'https://i.ibb.co/84nZ4k7J/100-natural-no-side-effects.png'
+            }
+          ],
+
+          // Herbal Power section
+          herbalSection: {
+            title: '🌿 ہربل پاور۔ سائنس کی تصدیق۔',
+            subtitle: 'قدرتی جڑی بوٹیوں اور ضروری تیلوں کا طاقتور مرکب، صدیوں سے طاقت، اسٹیمنا اور حیویت بڑھانے کے لیے قابل اعتماد۔',
+            ingredients: [
+              {
+                name: '🌸 یلنگ یلنگ آئل',
+                description: 'خون کا بہاؤ بہتر بناتا ہے اور آرام فراہم کرتا ہے',
+                image: 'https://i.ibb.co/mCc98QJN/Ylang-Ylang-Oil.png'
+              },
+              {
+                name: '🌿 ادرک کا تیل',
+                description: 'گردش بہتر بناتا ہے اور توانائی بڑھاتا ہے',
+                image: 'https://i.ibb.co/5gd9y6dy/Ginger-Oil.png'
+              },
+              {
+                name: '💜 لیوینڈر آئل',
+                description: 'ٹشوز کو تازگی اور سکون فراہم کرتا ہے',
+                image: 'https://i.ibb.co/8L7Y9pGJ/Lavender-Oil.png'
+              },
+              {
+                name: '🐟 مچھلی کا تیل',
+                description: 'لچک اور مضبوطی بڑھاتا ہے',
+                image: 'https://i.ibb.co/dsPj3jB1/Fish-Oil.png'
+              },
+              {
+                name: '🥥 انڈے کا تیل',
+                description: 'ٹشوز کو پرورش اور مضبوطی فراہم کرتا ہے',
+                image: 'https://i.ibb.co/9mmCGYC8/Egg-Oil.png'
+              },
+              {
+                name: '🌰 جائفل کا تیل',
+                description: 'برداشت اور کارکردگی بہتر بناتا ہے',
+                image: 'https://i.ibb.co/FL0vvL2k/Nutmeg-Oil.png'
+              },
+              {
+                name: '🌿 ریگ ماہی',
+                description: 'روایتی طور پر طاقت اور اسٹیمنا کے لیے مشہور',
+                image: 'https://i.ibb.co/VYSz2ypt/Reg-Mahi.png'
+              },
+              {
+                name: '🍃 بیر بوٹی',
+                description: 'جلد اور ٹشو کی مرمت میں مدد کرتا ہے',
+                image: 'https://i.ibb.co/NdZ9xtjg/Bair-Boti.png'
+              },
+              {
+                name: '🌱 ملکانگنی (سیلاسٹرس پینیکولیٹس)',
+                description: 'اعصابی صحت بڑھاتا ہے اور توانائی بڑھاتا ہے',
+                image: 'https://i.ibb.co/gMHLGBqT/Malkagni.png'
+              }
+            ]
+          },
+
+          customerReviewsSection: {
+            title: '⭐ ہمارے کسٹمرز کیا کہتے ہیں',
+            subtitle: 'پورے پاکستان سے مطمئن کسٹمرز کی حقیقی رائے',
+            reviews: [
+              {
+                id: 1,
+                name: 'محمد علی',
+                age: 32,
+                location: 'کراچی',
+                rating: 5,
+                review: 'صرف 3 ہفتوں میں حیرت انگیز نتائج! میرا اعتماد نمایاں طور پر بہتر ہوا ہے اور میری بیوی تبدیلیوں سے بہت خوش ہے۔',
+                date: '2 ہفتے پہلے',
+                verified: true
+              },
+              {
+                id: 2,
+                name: 'احمد حسن',
+                age: 28,
+                location: 'لاہور',
+                rating: 5,
+                review: 'قدرتی اجزاء اور کوئی سائیڈ ایفیکٹس نہیں۔ میں زیادہ توانا محسوس کرتا ہوں اور میری کارکردگی نمایاں طور پر بہتر ہوئی ہے۔',
+                date: '1 ماہ پہلے',
+                verified: true
+              },
+              {
+                id: 3,
+                name: 'عثمان خان',
+                age: 35,
+                location: 'اسلام آباد',
+                rating: 4,
+                review: 'اچھا پروڈکٹ جس کے واضح نتائج ہیں۔ وقت لگتا ہے لیکن یقیناً قابل قدر ہے۔ شادی شدہ مردوں کے لیے انتہائی تجویز کردہ۔',
+                date: '3 ہفتے پہلے',
+                verified: true
+              },
+              {
+                id: 4,
+                name: 'طارق محمود',
+                age: 40,
+                location: 'فیصل آباد',
+                rating: 5,
+                review: 'بہترین ہربل تیل جو میں نے استعمال کیا ہے۔ قدرتی فارمولا اور تیزی سے جذب ہونے والا۔ میرا اسٹیمنا اور برداشت بہت بہتر ہوئی ہے۔',
+                date: '2 ماہ پہلے',
+                verified: true
+              }
+            ],
+            stats: {
+              totalReviews: 1247,
+              averageRating: 4.8,
+              fiveStarPercentage: 89,
+              recommendationRate: 96
+            }
+          },
+          
+          dosageSection: {
+            title: '💧 خوراک اور استعمال کی ہدایات',
+            image: 'https://i.ibb.co/5hQ8VXNM/Dosage-Usage-Instructions.png',
+            content: {
+              dosage: {
+                title: 'خوراک',
+                points: [
+                  '➤ ہر رات اپنی ہتھیلی پر سلطان شاہی گولڈ تلا کے 5-6 قطرے لیں۔',
+                  '➤ مکمل طور پر جذب ہونے تک 5-10 منٹ تک آہستہ سے مساج کریں۔'
+                ]
+              },
+              duration: {
+                title: 'کورس کی مدت',
+                points: [
+                  '➤ مکمل اور دیرپا نتائج حاصل کرنے کے لیے 1-3 ماہ تک روزانہ استعمال کریں۔'
+                ]
+              },
+              bestResults: {
+                title: 'بہترین نتائج',
+                points: [
+                  '➤ زیادہ سے زیادہ جذب کے لیے سونے سے پہلے رات کو لگائیں۔',
+                  '➤ کورس کے دوران ٹھنڈے مشروبات، سگریٹ نوشی، اور تیل/تلی ہوئی غذاؤں سے بچیں۔',
+                  '➤ بحالی اور طاقت کو تیز کرنے کے لیے ہلکی غذا اور صحت مند طرز زندگی برقرار رکھیں۔'
+                ]
+              }
+            }
+          },
+
+          // FAQ section
+          faqTitle: '❓ اکثر پوچھے جانے والے سوالات (FAQs)',
+          faqSubtitle: 'سلطان شاہی گولڈ تلا کے بارے میں عام سوالات کے جوابات حاصل کریں',
+          faqs: [
+            {
+              question: 'سلطان شاہی گولڈ تلا کیا ہے؟',
+              answer: '👉 یہ قدرتی جڑی بوٹیوں اور ضروری تیلوں سے بنا ایک پریمیم ہربل مساج آئل ہے، جو مردوں کی طاقت، اسٹیمنا اور اعتماد بہتر بنانے کے لیے ڈیزائن کیا گیا ہے۔'
+            },
+            {
+              question: 'کیا سلطان شاہی گولڈ تلا استعمال کرنا محفوظ ہے؟',
+              answer: '👉 جی ہاں، یہ 100% ہربل ہے، نقصان دہ کیمیکلز یا سٹیرائیڈز سے پاک ہے، اور بیرونی استعمال کے لیے محفوظ ہے۔'
+            },
+            {
+              question: 'میں اسے کیسے استعمال کروں؟',
+              answer: '👉 اپنی ہتھیلی پر 5-6 قطرے لگائیں اور مکمل طور پر جذب ہونے تک 5-10 منٹ تک آہستہ سے مساج کریں۔ بہترین نتائج کے لیے ہر رات استعمال کریں۔'
+            },
+            {
+              question: 'نتائج دیکھنے میں کتنا وقت لگتا ہے؟',
+              answer: '👉 زیادہ تر صارفین 3-4 ہفتوں میں بہتری محسوس کرتے ہیں، جبکہ مکمل نتائج باقاعدگی سے استعمال کے 1-3 ماہ میں ظاہر ہوتے ہیں۔'
+            },
+            {
+              question: 'کیا اسے روزانہ استعمال کیا جا سکتا ہے؟',
+              answer: '👉 جی ہاں، سلطان شاہی گولڈ تلا روزانہ استعمال کے لیے محفوظ ہے اور مستقل استعمال سے بہترین کام کرتا ہے۔'
+            },
+            {
+              question: 'کیا اس کے کوئی سائیڈ ایفیکٹس ہیں؟',
+              answer: '👉 نہیں، یہ قدرتی جڑی بوٹیوں اور تیلوں سے بنا ہے، جو بغیر جلن یا سائیڈ ایفیکٹس کے محفوظ استعمال کو یقینی بناتا ہے۔'
+            },
+            {
+              question: 'کیا نئے شادی شدہ مرد اسے استعمال کر سکتے ہیں؟',
+              answer: '👉 بالکل۔ اسٹیمنا، اعتماد اور کارکردگی بڑھانے کے لیے نئے شادی شدہ مردوں کے لیے انتہائی تجویز کردہ ہے۔'
+            },
+            {
+              question: 'کیا یہ قبل از وقت انزال یا کمزور اسٹیمنا میں مدد کرتا ہے؟',
+              answer: '👉 جی ہاں، قدرتی اجزاء خون کی گردش، برداشت اور کنٹرول بہتر بناتے ہیں جو بہتر کارکردگی کے لیے ضروری ہے۔'
+            },
+            {
+              question: 'سلطان شاہی گولڈ تلا کی قیمت کیا ہے؟',
+              answer: '👉 1 بوتل – 2500 روپے | 2 بوتلیں – 4500 روپے | 3 بوتلیں – 6500 روپے (مفت ڈیلیوری اور COD دستیاب)۔'
+            },
+            {
+              question: 'میں سلطان شاہی گولڈ تلا کیسے آرڈر کر سکتا ہوں؟',
+              answer: '👉 آپ 0332-8888935 پر کال/واٹس ایپ کے ذریعے یا ہماری ویب سائٹ www.tphint.com پر جا کر آرڈر کر سکتے ہیں۔ پورے پاکستان میں کیش آن ڈیلیوری دستیاب ہے۔'
+            }
+          ]
+        }
+      },
+      // FAQ section
+      faqTitle: '❓ Frequently Asked Questions (FAQs)',
+      faqSubtitle: 'Get answers to the most common questions about Sultan Shahi Gold Tila',
+      faqs: [
+        {
+          question: 'What is Sultan Shahi Gold Tila?',
+          answer: '👉 It is a premium herbal massage oil made from natural herbs and essential oils, designed to improve men\'s strength, stamina, and confidence.'
+        },
+        {
+          question: 'Is Sultan Shahi Gold Tila safe to use?',
+          answer: '👉 Yes, it is 100% herbal, free from harmful chemicals or steroids, and safe for external use.'
+        },
+        {
+          question: 'How do I use it?',
+          answer: '👉 Apply 5–6 drops on your palm and gently massage for 5–10 minutes until fully absorbed. Use every night for best results.'
+        },
+        {
+          question: 'How long does it take to see results?',
+          answer: '👉 Most users notice improvements within 3–4 weeks, while full results appear in 1–3 months of regular use.'
+        },
+        {
+          question: 'Can it be used daily?',
+          answer: '👉 Yes, Sultan Shahi Gold Tila is safe for daily use and works best with consistent application.'
+        },
+        {
+          question: 'Does it have any side effects?',
+          answer: '👉 No, it is made from natural herbs and oils, ensuring safe usage without irritation or side effects.'
+        },
+        {
+          question: 'Can newly married men use it?',
+          answer: '👉 Absolutely. It is highly recommended for newly married men to boost stamina, confidence, and performance.'
+        },
+        {
+          question: 'Does it help with premature ejaculation or weak stamina?',
+          answer: '👉 Yes, the natural ingredients improve blood circulation, endurance, and control for better performance.'
+        },
+        {
+          question: 'What is the price of Sultan Shahi Gold Tila?',
+          answer: '👉 1 Bottle – Rs. 2500 | 2 Bottles – Rs. 4500 | 3 Bottles – Rs. 6500 (Free Delivery & COD Available).'
+        },
+        {
+          question: 'How can I order Sultan Shahi Gold Tila?',
+          answer: '👉 You can order via Call/WhatsApp at 0332-8888935 or visit our website www.tphint.com. Cash on Delivery is available all over Pakistan.'
+        }
+      ]
     },
     'g-max-passion': {
       title: 'G-Max Passion',
@@ -2003,8 +2548,8 @@ Please confirm my order. Thank you!`;
     return language === 'ur' && urduSections.includes(sectionName);
   };
 
-  // Check if this is Sultan Shahi Gold Majoon product for luxury theme
-  const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon';
+  // Check if this is Sultan Shahi Gold Majoon or Sultan Shahi Gold Tila product for luxury theme
+  const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila';
 
   return (
     <div className={`min-h-screen flex flex-col ${isLuxuryProduct ? 'bg-black text-white' : 'bg-gradient-to-br from-red-50 via-white to-red-50'} ${shouldShowInUrdu('all') ? 'font-urdu' : ''}`}>
@@ -2314,9 +2859,10 @@ Please confirm my order. Thank you!`;
                 : (productConfigs[slug]?.herbalSection?.badgesLine)}
               badgesLanguage={slug === 'slim-n-shape-garcinia-cambogia-capsules' ? 'en' : undefined}
               showIngredients={productConfigs[slug]?.herbalSection?.showIngredients}
-              ingredients={undefined}
+              ingredients={language === 'ur' && productConfigs[slug]?.i18n?.ur?.herbalSection?.ingredients ? (productConfigs[slug]?.i18n?.ur?.herbalSection?.ingredients) : (productConfigs[slug]?.herbalSection?.ingredients)}
               customColumns={language === 'ur' && productConfigs[slug]?.i18n?.ur?.herbalSection ? (productConfigs[slug]?.i18n?.ur?.herbalSection?.customColumns) : (productConfigs[slug]?.herbalSection?.customColumns)}
               oneRowLayout={slug === 'b-maxman-royal-special-treatment'}
+              threeByThreeLayout={slug === 'sultan-shahi-gold-tila'}
               bigImage={productConfigs[slug]?.herbalSection?.bigImage}
             />
           )}
@@ -2422,14 +2968,14 @@ Please confirm my order. Thank you!`;
         </section>
 
         {/* Testimonials - Always in English - Lazy Loaded */}
-        <section className={`py-12 md:py-16 ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gray-100'}`}>
+        <section className={`py-12 md:py-16 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gray-100'}`}>
           <div className="container mx-auto px-4">
             <motion.div className="text-center mb-12" {...fadeInUp}>
-              <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
-                {englishContent.testimonials.title}
+              <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>
+                {productConfigs[slug]?.testimonialsTitle || englishContent.testimonials.title}
               </h2>
-              <p className={`text-xl max-w-3xl mx-auto ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-600'}`}>
-                {englishContent.testimonials.subtitle}
+              <p className={`text-xl max-w-3xl mx-auto ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-600'}`}>
+                {productConfigs[slug]?.testimonialsSubtitle || englishContent.testimonials.subtitle}
               </p>
             </motion.div>
             <Suspense fallback={<LoadingFallback />}>
@@ -2438,8 +2984,8 @@ Please confirm my order. Thank you!`;
           </div>
         </section>
 
-        {/* Usage Instructions - Custom for Sultan Shahi Gold Majoon */}
-        {slug === 'sultan-shahi-gold-majoon' ? (
+        {/* Usage Instructions - Custom for Sultan Shahi Gold Majoon and Sultan Shahi Gold Tila */}
+        {slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? (
           <section className={`py-12 md:py-16 bg-gradient-to-b from-black to-gray-900 ${shouldShowInUrdu('usage') ? 'font-urdu' : ''}`} dir={shouldShowInUrdu('usage') ? 'rtl' : 'ltr'}>
             <div className="container mx-auto px-4">
               {(() => {
@@ -2471,12 +3017,28 @@ Please confirm my order. Thank you!`;
                           <div className="space-y-6">
                             <div>
                               <h3 className="text-xl font-semibold text-yellow-400 mb-2">{d?.content?.dosage?.title || 'Dosage'}</h3>
-                              <p className={`${shouldShowInUrdu('usage') ? 'text-right' : ''} text-gray-300`}>{arrow} {d?.content?.dosage?.text}</p>
+                              {d?.content?.dosage?.points ? (
+                                <ul className={`text-gray-300 space-y-2 ${shouldShowInUrdu('usage') ? 'text-right pr-5 list-none' : ''}`}>
+                                  {d.content.dosage.points.map((pt, i) => (
+                                    <li key={i}>{pt}</li>
+                                  ))}
+                                </ul>
+                              ) : (
+                                <p className={`${shouldShowInUrdu('usage') ? 'text-right' : ''} text-gray-300`}>{arrow} {d?.content?.dosage?.text}</p>
+                              )}
                             </div>
                             
                             <div>
                               <h3 className="text-xl font-semibold text-yellow-400 mb-2">{d?.content?.duration?.title || 'Course Duration'}</h3>
-                              <p className={`${shouldShowInUrdu('usage') ? 'text-right' : ''} text-gray-300`}>{arrow} {d?.content?.duration?.text}</p>
+                              {d?.content?.duration?.points ? (
+                                <ul className={`text-gray-300 space-y-2 ${shouldShowInUrdu('usage') ? 'text-right pr-5 list-none' : ''}`}>
+                                  {d.content.duration.points.map((pt, i) => (
+                                    <li key={i}>{pt}</li>
+                                  ))}
+                                </ul>
+                              ) : (
+                                <p className={`${shouldShowInUrdu('usage') ? 'text-right' : ''} text-gray-300`}>{arrow} {d?.content?.duration?.text}</p>
+                              )}
                             </div>
                             
                             <div>
@@ -2536,25 +3098,25 @@ Please confirm my order. Thank you!`;
         )}
 
         {/* Pricing */}
-        <section className={`py-12 md:py-16 ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-white'}`}>
+        <section className={`py-12 md:py-16 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-white'}`}>
           <div className="container mx-auto px-4">
             <motion.div className="text-center mb-12" {...fadeInUp}>
-              <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
+              <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>
                 {content.pricing.title}
               </h2>
-              <p className={`text-xl max-w-3xl mx-auto ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-600'}`}>{content.pricing.subtitle}</p>
+              <p className={`text-xl max-w-3xl mx-auto ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-600'}`}>{content.pricing.subtitle}</p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {/* 1st Pack */}
               <motion.div
-                className={`rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gray-800 border border-yellow-400' : 'bg-white border border-red-100'}`}
+                className={`rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gray-800 border border-yellow-400' : 'bg-white border border-red-100'}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className={`p-4 text-white text-center ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' : 'bg-red-600'}`}>
-                  <h3 className={`text-xl font-bold ${slug === 'sultan-shahi-gold-majoon' ? 'text-black' : 'text-white'}`}>
+                <div className={`p-4 text-white text-center ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-r from-yellow-500 to-yellow-600' : 'bg-red-600'}`}>
+                  <h3 className={`text-xl font-bold ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-black' : 'text-white'}`}>
                     {slug === 'slim-n-shape-garcinia-cambogia-capsules'
                       ? (productConfigs[slug]?.pricing?.packages?.[0]?.headerTitle || content.pricing.packages[0].title)
                       : slug === 'b-maxtime-super-active'
@@ -2563,17 +3125,17 @@ Please confirm my order. Thank you!`;
                   </h3>
                 </div>
                 <div className="p-6 text-center">
-                  <div className={`text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
+                  <div className={`text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>
                     Rs {(productConfigs[slug]?.pricing?.packages?.[0]?.price?.toLocaleString?.()
                       || content?.pricing?.packages?.[0]?.price?.toLocaleString?.()
                       || '2,500')}
-                    <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
+                    <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
                   </div>
                   <ul className="mb-6 text-left space-y-2">
                     {content.pricing.packages[0].features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <SafeIcon icon={FiCheck} className={`mt-1 mr-2 flex-shrink-0 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-green-500'}`} />
-                        <span className={slug === 'sultan-shahi-gold-majoon' ? 'text-gray-300' : 'text-gray-700'} dangerouslySetInnerHTML={{ __html: feature }} />
+                        <SafeIcon icon={FiCheck} className={`mt-1 mr-2 flex-shrink-0 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-green-500'}`} />
+                        <span className={slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-gray-300' : 'text-gray-700'} dangerouslySetInnerHTML={{ __html: feature }} />
                       </li>
                     ))}
                   </ul>
@@ -2582,13 +3144,13 @@ Please confirm my order. Thank you!`;
 
               {/* 2nd Pack */}
               <motion.div
-                className={`rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gray-800 border border-yellow-400' : 'bg-white border border-red-100'}`}
+                className={`rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gray-800 border border-yellow-400' : 'bg-white border border-red-100'}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <div className={`p-4 text-white text-center ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-r from-yellow-600 to-yellow-700' : 'bg-red-700'}`}>
-                  <h3 className={`text-xl font-bold ${slug === 'sultan-shahi-gold-majoon' ? 'text-black' : 'text-white'}`}>
+                <div className={`p-4 text-white text-center ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-r from-yellow-600 to-yellow-700' : 'bg-red-700'}`}>
+                  <h3 className={`text-xl font-bold ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-black' : 'text-white'}`}>
                     {slug === 'slim-n-shape-garcinia-cambogia-capsules'
                       ? (productConfigs[slug]?.pricing?.packages?.[1]?.headerTitle || content.pricing.packages[1].title)
                       : slug === 'b-maxtime-super-active'
@@ -2599,35 +3161,35 @@ Please confirm my order. Thank you!`;
                 <div className="p-6 text-center">
                   {slug === 'shahi-sultan-health-booster' ? (
                     <>
-                      <div className={`text-4xl font-bold mb-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
+                      <div className={`text-4xl font-bold mb-2 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>
                         Rs {(productConfigs[slug]?.pricing?.packages?.[1]?.price?.toLocaleString?.()
                           || content?.pricing?.packages?.[1]?.price?.toLocaleString?.()
                           || '4,500')}
-                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
+                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
                       </div>
                       {productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount ? (
-                        <div className={`text-sm inline-block px-2 py-1 rounded mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
+                        <div className={`text-sm inline-block px-2 py-1 rounded mb-4 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
                           {content.pricing.save} {productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount}
                         </div>
                       ) : null}
                     </>
                   ) : (
                     <div className="text-center mb-4">
-                      <div className={`text-4xl font-bold ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
+                      <div className={`text-4xl font-bold ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>
                         Rs {(productConfigs[slug]?.pricing?.packages?.[1]?.price?.toLocaleString?.()
                           || content?.pricing?.packages?.[1]?.price?.toLocaleString?.()
                           || '4,500')}
-                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
+                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
                       </div>
                       {slug === 'slim-n-shape-garcinia-cambogia-capsules' ? (
                         productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount ? (
-                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
+                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
                             {content.pricing.save} {productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount}
                           </div>
                         ) : null
                       ) : slug === 'b-maxtime-super-active' ? null : (
                         productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount ? (
-                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
+                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
                             {content.pricing.save} {(productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount?.toLocaleString?.()
                               || productConfigs[slug]?.pricing?.packages?.[1]?.saveAmount
                               || 500)}
@@ -2640,8 +3202,8 @@ Please confirm my order. Thank you!`;
                   <ul className="mb-6 text-left space-y-2">
                     {content.pricing.packages[1].features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <SafeIcon icon={FiCheck} className={`mt-1 mr-2 flex-shrink-0 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-green-500'}`} />
-                        <span className={slug === 'sultan-shahi-gold-majoon' ? 'text-gray-300' : 'text-gray-700'} dangerouslySetInnerHTML={{ __html: feature }} />
+                        <SafeIcon icon={FiCheck} className={`mt-1 mr-2 flex-shrink-0 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-green-500'}`} />
+                        <span className={slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-gray-300' : 'text-gray-700'} dangerouslySetInnerHTML={{ __html: feature }} />
                       </li>
                     ))}
                   </ul>
@@ -2650,13 +3212,13 @@ Please confirm my order. Thank you!`;
 
               {/* 3rd Pack */}
               <motion.div
-                className={`rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gray-800 border border-yellow-400' : 'bg-white border border-red-100'}`}
+                className={`rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gray-800 border border-yellow-400' : 'bg-white border border-red-100'}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <div className={`p-4 text-white text-center relative overflow-hidden ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-r from-yellow-700 to-yellow-800' : 'bg-red-700'}`}>
-                  <h3 className={`text-xl font-bold ${slug === 'sultan-shahi-gold-majoon' ? 'text-black' : 'text-white'}`}>
+                <div className={`p-4 text-white text-center relative overflow-hidden ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-r from-yellow-700 to-yellow-800' : 'bg-red-700'}`}>
+                  <h3 className={`text-xl font-bold ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-black' : 'text-white'}`}>
                     {slug === 'slim-n-shape-garcinia-cambogia-capsules'
                       ? (productConfigs[slug]?.pricing?.packages?.[2]?.headerTitle || content.pricing.packages[2].title)
                       : slug === 'b-maxtime-super-active'
@@ -2664,21 +3226,21 @@ Please confirm my order. Thank you!`;
                         : (productConfigs[slug]?.pricing?.packages?.[2]?.headerTitle || content.pricing.packages[2].title)}
                   </h3>
                   {/* Optional Popular badge */}
-                  <span className={`absolute top-2 right-2 text-xs font-bold px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' ? 'bg-black text-yellow-400' : 'bg-yellow-300 text-red-800'}`}>
+                  <span className={`absolute top-2 right-2 text-xs font-bold px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-black text-yellow-400' : 'bg-yellow-300 text-red-800'}`}>
                     {content.pricing.popular}
                   </span>
                 </div>
                 <div className="p-6 text-center">
                   {slug === 'shahi-sultan-health-booster' ? (
                     <>
-                      <div className={`text-4xl font-bold mb-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
+                      <div className={`text-4xl font-bold mb-2 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>
                         Rs {(productConfigs[slug]?.pricing?.packages?.[2]?.price?.toLocaleString?.()
                           || content?.pricing?.packages?.[2]?.price?.toLocaleString?.()
                           || '6,000')}
-                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
+                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
                       </div>
                       {productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount ? (
-                        <div className={`text-sm inline-block px-2 py-1 rounded mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
+                        <div className={`text-sm inline-block px-2 py-1 rounded mb-4 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
                           {content.pricing.save} {(productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount?.toLocaleString?.()
                             || productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount
                             || '1,500')}
@@ -2687,21 +3249,21 @@ Please confirm my order. Thank you!`;
                     </>
                   ) : (
                     <div className="text-center mb-4">
-                      <div className={`text-4xl font-bold ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>
+                      <div className={`text-4xl font-bold ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>
                         Rs {(productConfigs[slug]?.pricing?.packages?.[2]?.price?.toLocaleString?.()
                           || content?.pricing?.packages?.[2]?.price?.toLocaleString?.()
                           || '6,000')}
-                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
+                        <span className={`text-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-500'}`}>/-</span>
                       </div>
                       {slug === 'slim-n-shape-garcinia-cambogia-capsules' ? (
                         productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount ? (
-                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
+                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
                             {content.pricing.save} {productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount}
                           </div>
                         ) : null
                       ) : slug === 'b-maxtime-super-active' ? null : (
                         productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount ? (
-                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
+                          <div className={`mt-2 text-sm inline-block px-2 py-1 rounded ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-yellow-400 text-black' : 'bg-green-100 text-green-800'}`}>
                             {content.pricing.save} {(productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount?.toLocaleString?.()
                               || productConfigs[slug]?.pricing?.packages?.[2]?.saveAmount
                               || '1,500')}
@@ -2714,8 +3276,8 @@ Please confirm my order. Thank you!`;
                   <ul className="mb-6 text-left space-y-2">
                     {content.pricing.packages[2].features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <SafeIcon icon={FiCheck} className={`mt-1 mr-2 flex-shrink-0 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-green-500'}`} />
-                        <span className={slug === 'sultan-shahi-gold-majoon' ? 'text-gray-300' : 'text-gray-700'} dangerouslySetInnerHTML={{ __html: feature }} />
+                        <SafeIcon icon={FiCheck} className={`mt-1 mr-2 flex-shrink-0 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-green-500'}`} />
+                        <span className={slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-gray-300' : 'text-gray-700'} dangerouslySetInnerHTML={{ __html: feature }} />
                       </li>
                     ))}
                   </ul>
@@ -2729,89 +3291,89 @@ Please confirm my order. Thank you!`;
         <Suspense fallback={<LoadingFallback />}>
           <FAQSection
             language={language}
-            overrideTitle={(slug === 'slim-n-shape-garcinia-cambogia-capsules' || slug === 'slim-n-shape-tea' || slug === 'b-maxtime-super-active' || slug === 'shahi-sultan-health-booster' || slug === 'sultan-shahi-gold-majoon') ? (language === 'ur' ? productConfigs[slug]?.i18n?.ur?.faqTitle : productConfigs[slug]?.faqTitle) : undefined}
-            overrideSubtitle={(slug === 'slim-n-shape-garcinia-cambogia-capsules' || slug === 'slim-n-shape-tea' || slug === 'b-maxtime-super-active' || slug === 'shahi-sultan-health-booster' || slug === 'sultan-shahi-gold-majoon') ? (language === 'ur' ? productConfigs[slug]?.i18n?.ur?.faqSubtitle : productConfigs[slug]?.faqSubtitle) : undefined}
-            overrideFaqs={(slug === 'slim-n-shape-garcinia-cambogia-capsules' || slug === 'slim-n-shape-tea' || slug === 'b-maxtime-super-active' || slug === 'shahi-sultan-health-booster' || slug === 'sultan-shahi-gold-majoon') ? (language === 'ur' ? productConfigs[slug]?.i18n?.ur?.faqs : productConfigs[slug]?.faqs) : undefined}
+            overrideTitle={(slug === 'slim-n-shape-garcinia-cambogia-capsules' || slug === 'slim-n-shape-tea' || slug === 'b-maxtime-super-active' || slug === 'shahi-sultan-health-booster' || slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila') ? (language === 'ur' ? productConfigs[slug]?.i18n?.ur?.faqTitle : productConfigs[slug]?.faqTitle) : undefined}
+            overrideSubtitle={(slug === 'slim-n-shape-garcinia-cambogia-capsules' || slug === 'slim-n-shape-tea' || slug === 'b-maxtime-super-active' || slug === 'shahi-sultan-health-booster' || slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila') ? (language === 'ur' ? productConfigs[slug]?.i18n?.ur?.faqSubtitle : productConfigs[slug]?.faqSubtitle) : undefined}
+            overrideFaqs={(slug === 'slim-n-shape-garcinia-cambogia-capsules' || slug === 'slim-n-shape-tea' || slug === 'b-maxtime-super-active' || slug === 'shahi-sultan-health-booster' || slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila') ? (language === 'ur' ? productConfigs[slug]?.i18n?.ur?.faqs : productConfigs[slug]?.faqs) : undefined}
             ctaLanguage={(slug === 'slim-n-shape-tea' || slug === 'slim-n-shape-garcinia-cambogia-capsules') ? 'en' : undefined}
             slug={slug}
           />
         </Suspense>
 
         {/* Order Form */}
-        <section id="order-form" className={`py-12 md:py-16 text-white ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-r from-black to-gray-900' : 'bg-gradient-to-r from-red-600 to-red-700'}`}>
+        <section id="order-form" className={`py-12 md:py-16 text-white ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-r from-black to-gray-900' : 'bg-gradient-to-r from-red-600 to-red-700'}`}>
           <div className="container mx-auto px-4">
             <motion.div className="max-w-2xl mx-auto" {...fadeInUp}>
               <div className="text-center mb-8">
-                <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.title}</h2>
-                <p className={`text-xl ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-red-100'}`}>{content.orderForm.subtitle}</p>
+                <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.title}</h2>
+                <p className={`text-xl ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-red-100'}`}>{content.orderForm.subtitle}</p>
               </div>
 
-              <div className={`p-8 rounded-2xl backdrop-blur-sm ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gray-800/20 border border-yellow-400/30' : 'bg-white/10 border border-white/10'}`}>
+              <div className={`p-8 rounded-2xl backdrop-blur-sm ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gray-800/20 border border-yellow-400/30' : 'bg-white/10 border border-white/10'}`}>
                 <div className="grid gap-6">
                   <div>
-                    <label htmlFor="name" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.name} *</label>
+                    <label htmlFor="name" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.name} *</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
+                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
                       placeholder={content.orderForm.namePlaceholder}
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.phone} *</label>
+                    <label htmlFor="phone" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.phone} *</label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
+                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
                       placeholder="03XX-XXXXXXX"
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="address" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.address} *</label>
+                    <label htmlFor="address" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.address} *</label>
                     <textarea
                       id="address"
                       name="address"
                       value={formData.address}
                       onChange={handleInputChange}
                       rows="3"
-                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
+                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
                       placeholder={content.orderForm.addressPlaceholder}
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="city" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.city} *</label>
+                    <label htmlFor="city" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.city} *</label>
                     <input
                       type="text"
                       id="city"
                       name="city"
                       value={formData.city}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
+                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
                       placeholder={content.orderForm.cityPlaceholder}
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="quantity" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.quantity}</label>
+                    <label htmlFor="quantity" className={`block text-sm font-semibold mb-2 ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-white'}`}>{content.orderForm.quantity}</label>
                     <select
                       id="quantity"
                       name="quantity"
                       value={formData.quantity}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
+                      className={`w-full px-4 py-3 rounded-lg border outline-none ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400 bg-gray-800 border-yellow-400 focus:ring-2 focus:ring-yellow-400' : 'text-gray-800 border focus:ring-2 focus:ring-yellow-400'}`}
                     >
                       <option value="1">
                         {slug === 'slim-n-shape-tea'
@@ -2824,7 +3386,9 @@ Please confirm my order. Thank you!`;
                                 ? `1 Pack - Rs ${productConfigs[slug]?.pricing?.packages?.[0]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[0]?.price}`
                                 : (slug === 'sultan-shahi-gold-majoon'
                                   ? `1 Pack - Rs ${productConfigs[slug]?.pricing?.packages?.[0]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[0]?.price}`
-                                  : content.orderForm.quantityOptions[0]))))}
+                                  : (slug === 'sultan-shahi-gold-tila'
+                                    ? `1 Bottle - Rs ${productConfigs[slug]?.pricing?.packages?.[0]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[0]?.price}`
+                                    : content.orderForm.quantityOptions[0])))))}
                       </option>
                       <option value="2">
                         {slug === 'slim-n-shape-tea'
@@ -2837,7 +3401,9 @@ Please confirm my order. Thank you!`;
                                 ? `2 Packs - Rs ${productConfigs[slug]?.pricing?.packages?.[1]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[1]?.price}`
                                 : (slug === 'sultan-shahi-gold-majoon'
                                   ? `2 Packs - Rs ${productConfigs[slug]?.pricing?.packages?.[1]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[1]?.price}`
-                                  : content.orderForm.quantityOptions[1]))))}
+                                  : (slug === 'sultan-shahi-gold-tila'
+                                    ? `2 Bottles - Rs ${productConfigs[slug]?.pricing?.packages?.[1]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[1]?.price}`
+                                    : content.orderForm.quantityOptions[1])))))}
                       </option>
                       <option value="3">
                         {slug === 'slim-n-shape-tea'
@@ -2850,12 +3416,14 @@ Please confirm my order. Thank you!`;
                                 ? `3 Packs - Rs ${productConfigs[slug]?.pricing?.packages?.[2]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[2]?.price}`
                                 : (slug === 'sultan-shahi-gold-majoon'
                                   ? `3 Packs - Rs ${productConfigs[slug]?.pricing?.packages?.[2]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[2]?.price}`
-                                  : content.orderForm.quantityOptions[2]))))}
+                                  : (slug === 'sultan-shahi-gold-tila'
+                                    ? `3 Bottles - Rs ${productConfigs[slug]?.pricing?.packages?.[2]?.price?.toLocaleString?.() || productConfigs[slug]?.pricing?.packages?.[2]?.price}`
+                                    : content.orderForm.quantityOptions[2])))))}
                       </option>
                     </select>
                   </div>
 
-                  <div className={`p-4 rounded-lg text-center ${slug === 'sultan-shahi-gold-majoon' ? 'bg-yellow-400 text-black' : 'bg-yellow-400 text-red-800'}`}>
+                  <div className={`p-4 rounded-lg text-center ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-yellow-400 text-black' : 'bg-yellow-400 text-red-800'}`}>
                     <p className="font-bold text-lg">
                       {content.orderForm.total}: Rs {calculatePrice(formData.quantity)}/-
                     </p>
@@ -2864,7 +3432,7 @@ Please confirm my order. Thank you!`;
 
                   <motion.button
                     onClick={handleWhatsAppOrder}
-                    className={`w-full font-bold py-4 px-6 rounded-lg flex items-center justify-center space-x-3 text-lg transition-colors ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black' : 'bg-green-600 hover:bg-green-700 text-white'}`}
+                    className={`w-full font-bold py-4 px-6 rounded-lg flex items-center justify-center space-x-3 text-lg transition-colors ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black' : 'bg-green-600 hover:bg-green-700 text-white'}`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -2872,7 +3440,7 @@ Please confirm my order. Thank you!`;
                     <span>{content.orderForm.orderButton}</span>
                   </motion.button>
 
-                  <div className={`text-center ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-red-100'}`}>
+                  <div className={`text-center ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-red-100'}`}>
                     <p className="flex items-center justify-center space-x-2">
                       <SafeIcon icon={FiTruck} />
                       <span>{content.orderForm.sameDayDelivery}</span>

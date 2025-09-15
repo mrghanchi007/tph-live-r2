@@ -19,18 +19,18 @@ const TestimonialSlider = ({ testimonials, slug }) => {
         {testimonials.map((testimonial) => (
           <motion.div
             key={testimonial.id}
-            className={`p-6 rounded-lg shadow-lg ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gray-800 border border-yellow-400' : 'bg-white'}`}
+            className={`p-6 rounded-lg shadow-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gray-800 border border-yellow-400' : 'bg-white'}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center mb-4">
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-black' : 'bg-gradient-to-r from-red-500 to-red-600 text-white'}`}>
+              <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-black' : 'bg-gradient-to-r from-red-500 to-red-600 text-white'}`}>
                 {testimonial.name.charAt(0)}
               </div>
               <div className="ml-4">
-                <h4 className={`font-bold text-lg ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-400' : 'text-gray-800'}`}>{testimonial.name}</h4>
-                <p className={`text-sm ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-600'}`}>
+                <h4 className={`font-bold text-lg ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-400' : 'text-gray-800'}`}>{testimonial.name}</h4>
+                <p className={`text-sm ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-600'}`}>
                   {text.age}: {testimonial.age}, {text.location} {testimonial.location}
                 </p>
               </div>
@@ -39,9 +39,9 @@ const TestimonialSlider = ({ testimonials, slug }) => {
               {[...Array(testimonial.rating)].map((_, i) => (
                 <SafeIcon key={i} icon={FiStar} className="text-yellow-400 text-lg fill-current" />
               ))}
-              <span className={`ml-1 text-sm ${slug === 'sultan-shahi-gold-majoon' ? 'text-yellow-300' : 'text-gray-600'}`}>{testimonial.rating} {text.stars}</span>
+              <span className={`ml-1 text-sm ${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-yellow-300' : 'text-gray-600'}`}>{testimonial.rating} {text.stars}</span>
             </div>
-            <p className={`${slug === 'sultan-shahi-gold-majoon' ? 'text-gray-300' : 'text-gray-700'}`}>{testimonial.text}</p>
+            <p className={`${slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila' ? 'text-gray-300' : 'text-gray-700'}`}>{testimonial.text}</p>
           </motion.div>
         ))}
       </div>

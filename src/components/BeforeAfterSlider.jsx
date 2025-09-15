@@ -65,7 +65,7 @@ const BeforeAfterSlider = ({ sets, labels }) => {
                     {text.beforeTitle}
                   </div>
                 </div>
-                <p className="text-sm text-gray-300">{text.beforeDesc}</p>
+                <p className="text-sm text-gray-300">{set.beforeDetails || text.beforeDesc}</p>
               </div>
               {/* After */}
               <div className="text-center">
@@ -86,7 +86,7 @@ const BeforeAfterSlider = ({ sets, labels }) => {
                     {text.afterTitle}
                   </div>
                 </div>
-                <p className="text-sm text-gray-300">{text.afterDesc}</p>
+                <p className="text-sm text-gray-300">{set.afterDetails || text.afterDesc}</p>
               </div>
             </div>
             {set.summary && (

@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useParams } from 'react-router-dom';
 
-const HerbalPowerSection = ({ language = 'en', title, subtitle, bullets = [], badgesLine, badgesLanguage, showIngredients = true, customColumns, ingredients, oneRowLayout = false, bigImage }) => {
+const HerbalPowerSection = ({ language = 'en', title, subtitle, bullets = [], badgesLine, badgesLanguage, showIngredients = true, customColumns, ingredients, oneRowLayout = false, threeByThreeLayout = false, bigImage }) => {
   const { slug } = useParams();
-  const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon';
+  const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila';
 
   const herbalIngredients = {
     en: [
@@ -235,9 +235,9 @@ const HerbalPowerSection = ({ language = 'en', title, subtitle, bullets = [], ba
         {/* Ingredients Grid (optional; hidden when customColumns provided) */}
         {showIngredients && (!customColumns || customColumns.length === 0) && (
           <div className="flex flex-col items-center">
-            {oneRowLayout ? (
-              // Single-row layout (6 columns on md+)
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 max-w-7xl mx-auto">
+            {threeByThreeLayout ? (
+              // 3x3 layout for Sultan Shahi Gold Tila
+              <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
                 {currentIngredients.map((ingredient, index) => (
                   <motion.article
                     key={index}
@@ -251,7 +251,7 @@ const HerbalPowerSection = ({ language = 'en', title, subtitle, bullets = [], ba
                   >
                     {/* Round Image Container with 2px red border */}
                     <div className="relative mx-auto mb-4 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32">
-                      <div className="w-full h-full rounded-full border-2 border-red-500 bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center overflow-hidden">
+                      <div className={`w-full h-full rounded-full border-2 ${isLuxuryProduct ? 'border-yellow-400 bg-gray-800' : 'border-yellow-400 bg-white'} shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center overflow-hidden`}>
                         <img
                           src={ingredient.image}
                           alt={ingredient.alt}
@@ -263,14 +263,14 @@ const HerbalPowerSection = ({ language = 'en', title, subtitle, bullets = [], ba
                         />
                       </div>
                       {/* Decorative glow */}
-                      <div className="absolute inset-0 rounded-full bg-red-400 opacity-0 group-hover:opacity-20 transition-opacity blur-lg"></div>
+                      <div className={`absolute inset-0 rounded-full ${isLuxuryProduct ? 'bg-yellow-400' : 'bg-yellow-400'} opacity-0 group-hover:opacity-20 transition-opacity blur-lg`}></div>
                     </div>
 
                     {/* Text Content - Centered below image */}
                     <div className="space-y-2 max-w-[120px] md:max-w-[140px]">
                       <h3
                         id={`ingredient-${index}`}
-                        className="font-bold text-sm md:text-base text-gray-800 group-hover:text-green-600 transition-colors leading-tight"
+                        className={`font-bold text-sm md:text-base ${isLuxuryProduct ? 'text-yellow-400 group-hover:text-yellow-300' : 'text-gray-800 group-hover:text-green-600'} transition-colors leading-tight`}
                         title={`${ingredient.name} - ${ingredient.seoDescription}`}
                       >
                         {ingredient.name}

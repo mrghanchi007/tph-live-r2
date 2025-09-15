@@ -8,7 +8,7 @@ const { FiPlayCircle } = FiIcons;
 
 const VideoSection = ({ videoId, title, subtitle, coverImage, videoTitle }) => {
   const { slug } = useParams();
-  const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon';
+  const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila';
   const [videoLoaded, setVideoLoaded] = useState(false);
   const heading = title || 'See B-Maxman in Action';
   const sub = subtitle || 'Watch how B-Maxman has transformed the lives of men across Pakistan';
