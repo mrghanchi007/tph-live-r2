@@ -14,6 +14,11 @@ const SEOHead = ({
   // Get SEO data from centralized config
   const seoData = getSEOData(type, slug);
   
+  // Debug log to check what data we're getting
+  if (process.env.NODE_ENV === 'development') {
+    console.log('SEO Data Retrieved:', { type, slug, seoData });
+  }
+  
   // Use custom data if provided, otherwise use config data
   const title = customTitle || seoData.title;
   const description = customDescription || seoData.description;
@@ -23,6 +28,7 @@ const SEOHead = ({
 
   // Force update document title and meta tags as backup
   useEffect(() => {
+    // Update immediately
     document.title = title;
     
     // Manually update meta tags as fallback
@@ -39,6 +45,13 @@ const SEOHead = ({
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
     
+    // Also update after a short delay to ensure it overrides any other updates
+    setTimeout(() => {
+      document.title = title;
+      updateMetaTag('description', description);
+      updateMetaTag('keywords', keywords);
+    }, 100);
+    
     // Debug log to verify SEO is working (only in development)
     if (process.env.NODE_ENV === 'development') {
       console.log('SEO Updated:', { 
@@ -51,7 +64,7 @@ const SEOHead = ({
   }, [title, type, slug, description, keywords]);
 
   return (
-    <Helmet defer={false}>
+    <Helmet defer={false} prioritizeSeoTags>
       {/* Force update and clear existing tags */}
       <meta name="cache-control" content="no-cache, no-store, must-revalidate" />
       

@@ -27,7 +27,9 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <HelmetProvider>
-    <RouterProvider router={router} />
-  </HelmetProvider>
+  <StrictMode>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  </StrictMode>
 );
