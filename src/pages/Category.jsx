@@ -37,7 +37,18 @@ const Category = () => {
       {/* SEO Head */}
       <SEOHead 
         title={`${category.label} Herbal Products Pakistan | Natural Supplements | TPH Live`}
-        description={`Premium ${category.label.toLowerCase()} herbal products in Pakistan. Natural supplements for health & wellness. Authentic products with proven results.`}
+        description={`Premium ${category.label.toLowerCase()} herbal products in Pakistan. Natural supplements for health & wellness. Authentic products with proven results & free delivery.`}
+        keywords={`${category.label.toLowerCase()} herbal products Pakistan, natural ${category.label.toLowerCase()} supplements, ${category.label.toLowerCase()} health products, TPH Live ${category.label.toLowerCase()}`}
+        image="https://i.ibb.co/LDHXRX81/fav.png"
+        url={`https://tphlive.com/shop/${slug}`}
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": `${category.label} Products`,
+          "description": `Premium ${category.label.toLowerCase()} herbal products and natural supplements`,
+          "url": `https://tphlive.com/shop/${slug}`
+        }}
         keywords={`${category.label.toLowerCase()} herbal products Pakistan, natural ${category.label.toLowerCase()} supplements, ${category.label.toLowerCase()} health products`}
         image="https://tphlive.com/images/tph-live-logo.png"
         url={`https://tphlive.com/shop/${category.slug}`}

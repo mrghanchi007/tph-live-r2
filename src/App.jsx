@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from './common/SafeIcon';
+import SEOHead from './components/SEOHead';
 import './App.css';
 import { englishContent, urduContent } from './translations';
 
@@ -2583,8 +2584,61 @@ Please confirm my order. Thank you!`;
   // Check if this is Sultan Shahi Gold Majoon or Sultan Shahi Gold Tila product for luxury theme
   const isLuxuryProduct = slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila';
 
+  // Generate dynamic SEO data for product
+  const generateProductSEO = () => {
+    const config = productConfigs[slug];
+    if (!config) return {};
+
+    const productTitle = config.title || 'Product';
+    const productDescription = config.subtitle || 'Premium herbal product from TPH Live';
+    const productImage = config.heroImage || config.featureImage || 'https://i.ibb.co/LDHXRX81/fav.png';
+    
+    return {
+      title: `${productTitle} Pakistan | Buy Online | TPH Live`,
+      description: `${productTitle} - ${productDescription}. Order authentic herbal products with free delivery across Pakistan. Cash on delivery available.`,
+      keywords: `${productTitle}, ${productTitle.toLowerCase()}, herbal products Pakistan, natural supplements, TPH Live, buy online`,
+      image: productImage,
+      url: `https://tphlive.com/product/${slug}`,
+      type: 'product',
+      structuredData: {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": productTitle,
+        "description": productDescription,
+        "image": productImage,
+        "brand": {
+          "@type": "Brand",
+          "name": "TPH Live"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": config.specialPriceAmount || "5000",
+          "priceCurrency": "PKR",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "TPH Live"
+          }
+        }
+      }
+    };
+  };
+
+  const seoData = generateProductSEO();
+
   return (
     <div className={`min-h-screen flex flex-col ${isLuxuryProduct ? 'bg-black text-white' : 'bg-gradient-to-br from-red-50 via-white to-red-50'} ${shouldShowInUrdu('all') ? 'font-urdu' : ''}`}>
+      {/* SEO Head */}
+      <SEOHead 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        image={seoData.image}
+        url={seoData.url}
+        type={seoData.type}
+        structuredData={seoData.structuredData}
+      />
+      
       <div className="flex-grow">
         {/* Header moved to Root layout */}
 

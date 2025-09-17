@@ -8,11 +8,25 @@ const Contact = () => {
     <>
       {/* SEO Head */}
       <SEOHead 
-        title="Contact TPH Live - Herbal Products Pakistan | Customer Support"
-        description="Get in touch with TPH Live for herbal product inquiries. Expert consultation, order support & customer service. Call +92-332-8888935 for personalized health solutions."
-        keywords="TPH Live contact, herbal products consultation Pakistan, customer support, phone order"
-        image="https://tphlive.com/images/tph-live-logo.png"
+        title="Contact Us – TPH Live | Order Herbal Products Pakistan"
+        description="Get in touch with TPH Live for orders, queries & support. Call 0332-8888935 for herbal products across Pakistan. Free delivery & cash on delivery available."
+        keywords="contact TPH Live, order herbal products Pakistan, customer support, herbal products helpline, TPH Live phone number, consultation"
+        image="https://i.ibb.co/LDHXRX81/fav.png"
         url="https://tphlive.com/contact"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "TPH Live",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+92-332-8888935",
+              "contactType": "customer service"
+            }
+          }
+        }}
       />
       {/* Hero Header (same style as About/Shop) */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">

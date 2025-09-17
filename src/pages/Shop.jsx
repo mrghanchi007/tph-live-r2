@@ -29,6 +29,21 @@ const Shop = () => {
     <>
       {/* SEO Head */}
       <SEOHead 
+        title="Shop Herbal Products Online | TPH Live Pakistan"
+        description="Browse our complete range of herbal products for men's health, women's wellness & weight management. Authentic natural supplements with free delivery across Pakistan."
+        keywords="buy herbal products online Pakistan, natural supplements shop, men's health products, women's wellness products, weight management supplements, TPH Live shop"
+        image="https://i.ibb.co/LDHXRX81/fav.png"
+        url="https://tphlive.com/shop"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Herbal Products Shop",
+          "description": "Complete range of herbal products for health and wellness",
+          "url": "https://tphlive.com/shop"
+        }}
+      />
+      <SEOHead 
         title="Shop Herbal Products Online Pakistan | TPH Live Store"
         description="Shop authentic herbal products online in Pakistan. Wide range of natural supplements for men, women & weight loss. Cash on delivery available nationwide."
         keywords="buy herbal products online Pakistan, herbal supplements shop, natural medicine store, online herbal store"

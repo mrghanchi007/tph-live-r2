@@ -8,6 +8,31 @@ import { FaLeaf, FaIndustry, FaBoxes, FaHandshake } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 
 const Home = () => {
+  // Structured data for homepage
+  const homeStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TPH Live - The Planner Herbal International",
+    "alternateName": "TPH Live",
+    "url": "https://tphlive.com",
+    "logo": "https://i.ibb.co/LDHXRX81/fav.png",
+    "description": "Pakistan's leading herbal products company offering natural supplements for men's and women's health since 2002.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PK",
+      "addressRegion": "Pakistan"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+92-332-8888935",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Urdu"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/tphlive",
+      "https://www.instagram.com/tphlive"
+    ]
+  };
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -67,11 +92,13 @@ const Home = () => {
     <div className="bg-white">
       {/* SEO Head */}
       <SEOHead 
-        title="TPH Live - Best Herbal Products in Pakistan | Natural Health Store"
-        description="Discover Pakistan's #1 herbal products store. Premium natural supplements for men's health, women's wellness & weight management. Free delivery across Pakistan!"
-        keywords="best herbal products Pakistan, natural health store, ayurvedic supplements, herbal medicine online, TPH Live"
-        image="https://tphlive.com/images/tph-live-logo.png"
+        title="TPH Live – Natural Health & Wellness | Best Herbal Products Pakistan"
+        description="Pakistan's trusted herbal products company since 2002. Premium natural supplements for men's health, women's wellness & weight management. Free delivery nationwide!"
+        keywords="TPH Live, herbal products Pakistan, natural supplements, men's health, women's wellness, weight management, ayurvedic medicine, herbal store Pakistan"
+        image="https://i.ibb.co/LDHXRX81/fav.png"
         url="https://tphlive.com/"
+        type="website"
+        structuredData={homeStructuredData}
       />
       {/* 1️⃣ Hero Section */}
       <section className="relative bg-white overflow-hidden">

@@ -19,11 +19,26 @@ const About = () => {
     <div className="relative">
       {/* SEO Head */}
       <SEOHead 
-        title="About TPH Live - Pakistan's Trusted Herbal Products Company"
-        description="Learn about TPH Live's journey in providing authentic herbal products in Pakistan. Our commitment to quality, natural ingredients & customer satisfaction since 2002."
-        keywords="TPH Live company, herbal products manufacturer Pakistan, natural supplements company, about us"
+        title="About Us – TPH Live | Pakistan's Leading Herbal Products Company"
+        description="Discover TPH Live's 20+ year journey in providing authentic herbal products across Pakistan. Quality natural ingredients, customer satisfaction & trusted since 2002."
+        keywords="About TPH Live, herbal products manufacturer Pakistan, natural supplements company, The Planner Herbal International, herbal medicine company Pakistan"
         image="https://tphlive.com/images/About%20TPH%20International.png"
         url="https://tphlive.com/about"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "TPH Live - The Planner Herbal International",
+            "foundingDate": "2002",
+            "description": "Pakistan's leading herbal products company providing natural health solutions since 2002.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "PK"
+            }
+          }
+        }}
       />
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
