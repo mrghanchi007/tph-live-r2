@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import { PRODUCTS } from '../common/products';
+import SEOHead from '../components/SEOHead';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 24 },
@@ -16,6 +17,8 @@ const stagger = {
 const About = () => {
   return (
     <div className="relative">
+      {/* SEO Head */}
+      <SEOHead type="page" slug="about" />
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl" />

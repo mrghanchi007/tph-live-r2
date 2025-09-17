@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
-  useEffect(() => {
-    document.title = 'Contact Us | The Planner Herbal International (TPH Int.)';
-  }, []);
 
   return (
     <>
+      {/* SEO Head */}
+      <SEOHead type="page" slug="contact" />
       {/* Hero Header (same style as About/Shop) */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl" />

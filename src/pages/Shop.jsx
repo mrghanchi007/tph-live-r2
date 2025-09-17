@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CATEGORY_LIST, PRODUCTS, slugifyProduct } from '../common/products';
+import SEOHead from '../components/SEOHead';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 12 },
@@ -10,10 +11,6 @@ const cardVariants = {
 
 const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  // Set page title for SEO
-  useEffect(() => {
-    document.title = 'Shop | The Planner Herbal International (TPH Int.)';
-  }, []);
 
   // Flatten all products with category info
   const allProducts = useMemo(() => {
@@ -30,6 +27,8 @@ const Shop = () => {
   }, [selectedCategory, allProducts]);
   return (
     <>
+      {/* SEO Head */}
+      <SEOHead type="page" slug="shop" />
       {/* Hero Header (match About hero) */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl" />

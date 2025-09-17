@@ -1,15 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiShoppingCart, FiTruck, FiAward, FiShield, FiArrowRight } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { PRODUCTS, slugifyProduct } from '../common/products';
 import { FaLeaf, FaIndustry, FaBoxes, FaHandshake } from 'react-icons/fa';
+import SEOHead from '../components/SEOHead';
 
 const Home = () => {
-  useEffect(() => {
-    document.title = 'The Planner Herbal International (TPH Int.)';
-  }, []);
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -67,6 +65,8 @@ const Home = () => {
 
   return (
     <div className="bg-white">
+      {/* SEO Head */}
+      <SEOHead type="page" slug="home" />
       {/* 1️⃣ Hero Section */}
       <section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-white to-red-50 opacity-90"></div>

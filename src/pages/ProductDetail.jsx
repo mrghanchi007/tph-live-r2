@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PRODUCTS, CATEGORY_LIST } from '../common/products';
@@ -10,6 +10,8 @@ import {
   FiTruck, 
   FiShield 
 } from 'react-icons/fi';
+import SEOHead from '../components/SEOHead';
+import { generateProductStructuredData } from '../config/seoConfig';
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -32,14 +34,8 @@ const ProductDetail = () => {
   // Sultan Shahi Gold Majoon aur Sultan Shahi Gold Tila ke liye luxury theme
   const isLuxuryTheme = slug === 'sultan-shahi-gold-majoon' || slug === 'sultan-shahi-gold-tila';
 
-  useEffect(() => {
-    if (product) {
-      document.title = `${product.name} | The Planner Herbal International`;
-      window.scrollTo(0, 0);
-    } else {
-      document.title = 'Product Not Found | The Planner Herbal International';
-    }
-  }, [product]);
+  // Generate structured data for product
+  const structuredData = product && category ? generateProductStructuredData(product, category.label) : null;
 
   if (!product) {
     return (
@@ -60,6 +56,12 @@ const ProductDetail = () => {
 
   return (
     <div className={isLuxuryTheme ? "bg-black min-h-screen text-white" : "bg-gray-50"}>
+      {/* SEO Head */}
+      <SEOHead 
+        type="product" 
+        slug={slug} 
+        structuredData={structuredData}
+      />
       {/* Breadcrumb */}
       <div className={isLuxuryTheme ? "bg-gray-900 shadow-sm border-b border-yellow-500/20" : "bg-white shadow-sm"}>
         <div className="container mx-auto px-4 py-3">
