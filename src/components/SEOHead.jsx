@@ -39,8 +39,15 @@ const SEOHead = ({
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
     
-    // Debug log to verify SEO is working
-    console.log('SEO Updated:', { type, slug, title, description: description.substring(0, 50) + '...' });
+    // Debug log to verify SEO is working (only in development)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('SEO Updated:', { 
+        type, 
+        slug, 
+        title: title || 'No title', 
+        description: description ? description.substring(0, 50) + '...' : 'No description'
+      });
+    }
   }, [title, type, slug, description, keywords]);
 
   return (

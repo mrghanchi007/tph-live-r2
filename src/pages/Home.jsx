@@ -70,7 +70,6 @@ const Home = () => {
       {/* 1️⃣ Hero Section */}
       <section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-white to-red-50 opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('/images/product-collage.jpg')] bg-cover bg-center mix-blend-overlay opacity-10"></div>
         
         <div className="container mx-auto px-4 py-16 md:py-24 relative">
           <div className="flex flex-col lg:flex-row items-center gap-12">
