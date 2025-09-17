@@ -28,7 +28,13 @@ const Shop = () => {
   return (
     <>
       {/* SEO Head */}
-      <SEOHead type="page" slug="shop" />
+      <SEOHead 
+        title="Shop Herbal Products Online Pakistan | TPH Live Store"
+        description="Shop authentic herbal products online in Pakistan. Wide range of natural supplements for men, women & weight loss. Cash on delivery available nationwide."
+        keywords="buy herbal products online Pakistan, herbal supplements shop, natural medicine store, online herbal store"
+        image="https://tphlive.com/images/tph-live-logo.png"
+        url="https://tphlive.com/shop"
+      />
       {/* Hero Header (match About hero) */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl" />

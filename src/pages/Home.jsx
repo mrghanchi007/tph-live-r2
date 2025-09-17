@@ -66,7 +66,13 @@ const Home = () => {
   return (
     <div className="bg-white">
       {/* SEO Head */}
-      <SEOHead type="page" slug="home" />
+      <SEOHead 
+        title="TPH Live - Best Herbal Products in Pakistan | Natural Health Store"
+        description="Discover Pakistan's #1 herbal products store. Premium natural supplements for men's health, women's wellness & weight management. Free delivery across Pakistan!"
+        keywords="best herbal products Pakistan, natural health store, ayurvedic supplements, herbal medicine online, TPH Live"
+        image="https://tphlive.com/images/tph-live-logo.png"
+        url="https://tphlive.com/"
+      />
       {/* 1️⃣ Hero Section */}
       <section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-white to-red-50 opacity-90"></div>

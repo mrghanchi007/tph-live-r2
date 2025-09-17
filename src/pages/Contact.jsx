@@ -7,7 +7,13 @@ const Contact = () => {
   return (
     <>
       {/* SEO Head */}
-      <SEOHead type="page" slug="contact" />
+      <SEOHead 
+        title="Contact TPH Live - Herbal Products Pakistan | Customer Support"
+        description="Get in touch with TPH Live for herbal product inquiries. Expert consultation, order support & customer service. Call +92-332-8888935 for personalized health solutions."
+        keywords="TPH Live contact, herbal products consultation Pakistan, customer support, phone order"
+        image="https://tphlive.com/images/tph-live-logo.png"
+        url="https://tphlive.com/contact"
+      />
       {/* Hero Header (same style as About/Shop) */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl" />

@@ -58,8 +58,12 @@ const ProductDetail = () => {
     <div className={isLuxuryTheme ? "bg-black min-h-screen text-white" : "bg-gray-50"}>
       {/* SEO Head */}
       <SEOHead 
-        type="product" 
-        slug={slug} 
+        title={`${product.name} Pakistan | ${product.category} Herbal Supplement | TPH Live`}
+        description={`${product.name} - ${product.description} Premium herbal supplement for ${product.category.toLowerCase()}. Price: Rs ${product.price.toLocaleString()}. Order authentic product now!`}
+        keywords={`${product.name} Pakistan, ${product.category.toLowerCase()} herbal products, natural supplements, ${product.name.toLowerCase()}`}
+        image={product.image}
+        url={`https://tphlive.com/product/${slug}`}
+        type="product"
         structuredData={structuredData}
       />
       {/* Breadcrumb */}

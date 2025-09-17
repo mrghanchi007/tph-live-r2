@@ -35,7 +35,13 @@ const Category = () => {
   return (
     <>
       {/* SEO Head */}
-      <SEOHead type="category" slug={category.slug} />
+      <SEOHead 
+        title={`${category.label} Herbal Products Pakistan | Natural Supplements | TPH Live`}
+        description={`Premium ${category.label.toLowerCase()} herbal products in Pakistan. Natural supplements for health & wellness. Authentic products with proven results.`}
+        keywords={`${category.label.toLowerCase()} herbal products Pakistan, natural ${category.label.toLowerCase()} supplements, ${category.label.toLowerCase()} health products`}
+        image="https://tphlive.com/images/tph-live-logo.png"
+        url={`https://tphlive.com/shop/${category.slug}`}
+      />
       {/* Hero Header (match About hero) */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl" />

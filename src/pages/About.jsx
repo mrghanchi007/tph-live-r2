@@ -18,7 +18,13 @@ const About = () => {
   return (
     <div className="relative">
       {/* SEO Head */}
-      <SEOHead type="page" slug="about" />
+      <SEOHead 
+        title="About TPH Live - Pakistan's Trusted Herbal Products Company"
+        description="Learn about TPH Live's journey in providing authentic herbal products in Pakistan. Our commitment to quality, natural ingredients & customer satisfaction since 2002."
+        keywords="TPH Live company, herbal products manufacturer Pakistan, natural supplements company, about us"
+        image="https://tphlive.com/images/About%20TPH%20International.png"
+        url="https://tphlive.com/about"
+      />
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
