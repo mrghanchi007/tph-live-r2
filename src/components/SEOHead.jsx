@@ -14,11 +14,6 @@ const SEOHead = ({
   // Get SEO data from centralized config
   const seoData = getSEOData(type, slug);
   
-  // Debug log to check what data we're getting
-  if (process.env.NODE_ENV === 'development') {
-    console.log('SEO Data Retrieved:', { type, slug, seoData });
-  }
-  
   // Use custom data if provided, otherwise use config data
   const title = customTitle || seoData.title;
   const description = customDescription || seoData.description;
@@ -26,42 +21,78 @@ const SEOHead = ({
   const image = customImage || seoData.image;
   const url = `${seoData.url}${window.location.pathname}`;
 
-  // Force update document title and meta tags as backup
+  // Aggressive meta tag update approach
   useEffect(() => {
-    // Update immediately
-    document.title = title;
-    
-    // Manually update meta tags as fallback
-    const updateMetaTag = (name, content) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
+    // Function to update or create meta tags
+    const updateMetaTag = (selector, attribute, content) => {
+      let meta = document.querySelector(selector);
       if (!meta) {
         meta = document.createElement('meta');
-        meta.setAttribute('name', name);
+        if (attribute === 'name') {
+          meta.setAttribute('name', selector.replace('meta[name="', '').replace('"]', ''));
+        } else if (attribute === 'property') {
+          meta.setAttribute('property', selector.replace('meta[property="', '').replace('"]', ''));
+        }
         document.head.appendChild(meta);
       }
       meta.setAttribute('content', content);
     };
-    
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords);
-    
-    // Also update after a short delay to ensure it overrides any other updates
-    setTimeout(() => {
+
+    // Function to perform all updates
+    const performSEOUpdates = () => {
+      // Update title
       document.title = title;
-      updateMetaTag('description', description);
-      updateMetaTag('keywords', keywords);
-    }, 100);
+      
+      // Update basic meta tags
+      updateMetaTag('meta[name="description"]', 'name', description);
+      updateMetaTag('meta[name="keywords"]', 'name', keywords);
+      updateMetaTag('meta[name="title"]', 'name', title);
+      
+      // Update Open Graph tags
+      updateMetaTag('meta[property="og:title"]', 'property', title);
+      updateMetaTag('meta[property="og:description"]', 'property', description);
+      updateMetaTag('meta[property="og:image"]', 'property', image);
+      updateMetaTag('meta[property="og:url"]', 'property', url);
+      
+      // Update Twitter tags
+      updateMetaTag('meta[name="twitter:title"]', 'name', title);
+      updateMetaTag('meta[name="twitter:description"]', 'name', description);
+      updateMetaTag('meta[name="twitter:image"]', 'name', image);
+    };
+
+    // Immediate update
+    performSEOUpdates();
     
-    // Debug log to verify SEO is working (only in development)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('SEO Updated:', { 
-        type, 
-        slug, 
-        title: title || 'No title', 
-        description: description ? description.substring(0, 50) + '...' : 'No description'
-      });
+    // Multiple updates with different intervals
+    const intervals = [10, 50, 100, 200, 500, 1000];
+    intervals.forEach(delay => {
+      setTimeout(performSEOUpdates, delay);
+    });
+    
+    // Also update on next tick and when DOM is ready
+    requestAnimationFrame(performSEOUpdates);
+    
+    // Update when window loads (if not already loaded)
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', performSEOUpdates);
+      window.addEventListener('load', performSEOUpdates);
     }
-  }, [title, type, slug, description, keywords]);
+    
+    // Debug log
+    console.log('🔍 SEO Updated:', { 
+      type, 
+      slug, 
+      title: title?.substring(0, 50) + '...', 
+      description: description?.substring(0, 50) + '...'
+    });
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('DOMContentLoaded', performSEOUpdates);
+      window.removeEventListener('load', performSEOUpdates);
+    };
+    
+  }, [title, description, keywords, image, url, type, slug]);
 
   return (
     <Helmet defer={false} prioritizeSeoTags>
