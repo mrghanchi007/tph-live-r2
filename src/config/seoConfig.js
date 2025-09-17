@@ -91,31 +91,6 @@ export const SEO_CONFIG = {
       keywords: "Sultan Shahi Gold Tila Pakistan, herbal oil supplement, royal strength formula"
     },
 
-    'bustmax-breast-oil': {
-      title: "BustMax Breast Oil Pakistan | Natural Enhancement Oil | TPH Live",
-      description: "BustMax Breast Oil - Natural breast enhancement & firming oil for women. Safe herbal formula. Price: Rs 2,500. Discreet delivery available!",
-      keywords: "BustMax Breast Oil Pakistan, natural breast enhancement, herbal firming oil"
-    },
-
-    'g-max-passion': {
-      title: "G-Max Passion Pakistan | Women's Vitality Supplement | TPH Live",
-      description: "G-Max Passion herbal supplement for women's vitality & desire. Natural hormonal balance formula. Price: Rs 2,000. Confidential ordering!",
-      keywords: "G-Max Passion Pakistan, women vitality supplement, natural libido booster"
-    },
-
-    'malka-shahi-gold-health-booster': {
-      title: "Malka Shahi Gold Health Booster Pakistan | Women's Premium Tonic | TPH Live",
-      description: "Malka Shahi Gold Health Booster - Premium herbal tonic for women's health & beauty. Royal formula with natural ingredients. Price: Rs 7,500!",
-      keywords: "Malka Shahi Gold Pakistan, women health booster, premium herbal tonic"
-    },
-
-
-    'slim-n-shape-tea': {
-      title: "Slim n Shape Tea Pakistan | Herbal Weight Loss Tea | TPH Live",
-      description: "Slim n Shape detox tea for natural weight management. Herbal blend for metabolism boost & fat burning. Price: Rs 999. Authentic product!",
-      keywords: "Slim n Shape Tea Pakistan, weight loss tea, herbal detox tea, metabolism booster"
-    },
-
     // Women's Products
     'bustmax-breast-oil': {
       title: "BustMax Breast Oil Pakistan | Natural Breast Enhancement | TPH Live",
@@ -135,7 +110,13 @@ export const SEO_CONFIG = {
       keywords: "Malka Shahi Gold Pakistan, women health booster, premium herbal tonic, royal women supplement"
     },
 
-    // Weight Loss Products  
+    // Weight Loss Products
+    'slim-n-shape-tea': {
+      title: "Slim n Shape Tea Pakistan | Herbal Weight Loss Tea | TPH Live",
+      description: "Slim n Shape detox tea for natural weight management. Herbal blend for metabolism boost & fat burning. Price: Rs 999. Authentic product!",
+      keywords: "Slim n Shape Tea Pakistan, weight loss tea, herbal detox tea, metabolism booster"
+    },
+
     'slim-n-shape-garcinia-cambogia-capsules': {
       title: "Slim n Shape Garcinia Cambogia Pakistan | Weight Loss Capsules | TPH Live",
       description: "Best Slim n Shape Garcinia Cambogia capsules in Pakistan. Natural weight loss & belly fat burner. Proven results. Price: Rs 2,000. Order now!",
