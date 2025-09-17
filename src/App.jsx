@@ -270,7 +270,7 @@ function App() {
           id: 1,
           duration: 4,
           before: 'https://i.ibb.co/MDQ1fk1S/Before-4-Weeks-of-Use.jpg',
-          after: 'https://i.ibb.co/9k1d7w2k/After-4-Weeks-of-Use.png',
+          after: 'https://i.ibb.co/21ZPqdCJ/After-4-Weeks-of-Use.png',
           summary: '',
           beforeDetails: 'Low energy, poor confidence, marital issues',
           afterDetails: 'Renewed vigor, strong performance, happy relationship'
@@ -278,7 +278,7 @@ function App() {
         {
           id: 2,
           duration: 8,
-          before: 'https://i.ibb.co/mVycHTBS/Before-8-Weeks-of-Use.jpg',
+          before: 'https://i.ibb.co/xtxHq9Pz/Before-8-Weeks-of-Use.png',
           after: 'https://i.ibb.co/CKV28Vr7/After-8-Weeks-of-Use.png',
           summary: '',
           beforeDetails: 'Low energy, poor confidence, marital issues',
@@ -2362,10 +2362,29 @@ function App() {
       const productTitle = productConfigs[slug].title;
       document.title = `${productTitle} | The Planner Herbal International`;
 
+      // Product-specific meta descriptions
+      let metaDesc = `${productTitle} - Premium herbal solution from The Planner Herbal International. 100% natural ingredients, free delivery across Pakistan.`;
+      
+      if (slug === 'sultan-shahi-gold-majoon') {
+        metaDesc = 'Sultan Shahi Gold Majoon - Traditional Unani herbal tonic for men\'s strength, stamina & vitality. Eliminates weakness, boosts performance, 100% natural formula. Free delivery across Pakistan.';
+      }
+
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute('content', `${productTitle} - Premium herbal solution from The Planner Herbal International. 100% natural ingredients, free delivery across Pakistan.`);
+        metaDescription.setAttribute('content', metaDesc);
+      }
+
+      // Update Open Graph description
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) {
+        ogDescription.setAttribute('content', metaDesc);
+      }
+
+      // Update Twitter description
+      const twitterDescription = document.querySelector('meta[property="twitter:description"]');
+      if (twitterDescription) {
+        twitterDescription.setAttribute('content', metaDesc);
       }
 
       // Update Open Graph title
@@ -2378,6 +2397,19 @@ function App() {
       const twitterTitle = document.querySelector('meta[property="twitter:title"]');
       if (twitterTitle) {
         twitterTitle.setAttribute('content', `${productTitle} | The Planner Herbal International`);
+      }
+
+      // Update Open Graph image for sultan-shahi-gold-majoon
+      if (slug === 'sultan-shahi-gold-majoon') {
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage) {
+          ogImage.setAttribute('content', 'https://i.ibb.co/Zw5CjYC/Sultan-Shahi-Gold-Majoon-Hero-Section.png');
+        }
+
+        const twitterImage = document.querySelector('meta[property="twitter:image"]');
+        if (twitterImage) {
+          twitterImage.setAttribute('content', 'https://i.ibb.co/Zw5CjYC/Sultan-Shahi-Gold-Majoon-Hero-Section.png');
+        }
       }
     }
 
